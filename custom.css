@@ -34,13 +34,6 @@
   margin-right: 0;
 }
 
-@media only screen and (max-width: 1000px) {
-  .social-container {
-    margin-right: auto;
-    margin-left: 0;
-  }
-}
-
 .social-container a {
   float: right;
   font-size: 2em;
@@ -50,6 +43,25 @@
 
 .social-container a:hover {
   color: #293241;
+}
+
+@media only screen and (max-width: 1000px) {
+  .site-title {
+    font-size: 4.5em;
+  }
+  .site-subtitle {
+    font-size: 1.5em;
+  }
+  .social-container {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .social-container a {
+    float: left !important;
+  }
 }
 
 /* CONTENT */
