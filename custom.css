@@ -64,6 +64,19 @@
   }
 }
 
+@media only screen and (max-width: 660px) {
+  .section {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .panel-block {
+    padding: 0.5em !important;
+  }
+  .panel-heading {
+    padding: 0.5em;
+  }
+}
+
 /* CONTENT */
 .panel-heading {
   font-family: "DM Serif Text", serif;
