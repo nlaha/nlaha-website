@@ -43,9 +43,9 @@ var app = new Vue({
         url: "",
       },
       {
-        title: "UW Medical Center - Temporary Work",
+        title: "UW Medicine - Temporary Work",
         description:
-          "Assisted the Laboratory Medicine Informatics with some data science and visualization programming in both a volunteer position and a paid position.",
+          "Assisted Laboratory Medicine Informatics with some data science and visualization programming in both a volunteer position and a paid position.",
         url: "",
       },
       {
