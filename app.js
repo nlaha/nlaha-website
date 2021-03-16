@@ -62,6 +62,12 @@ var app = new Vue({
           "SPS MC is an Office 365 secured Minecraft server for Seattle Public Schools students. It uses the SPS microsoft accounts to verify if a player is actually a part of Seattle Public Schools.",
         url: "https://spsmc.net",
       },
+      {
+        title: "War Map",
+        description:
+          "War Map is a work in progress political data visualization tool. It is capable of analyzing election data down to the precinct level.",
+        url: "https://map.nlaha.com",
+      },
     ],
     art: [
       {
