@@ -25,12 +25,12 @@
 
 .title-container {
   margin: auto;
-  min-width: 700px;
   margin-left: 0;
 }
 
 .social-container {
   margin: auto;
+  min-width: 300px;
   margin-right: 0;
 }
 
