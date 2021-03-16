@@ -59,7 +59,7 @@ var app = new Vue({
       {
         title: "SPS MC",
         description:
-          "SPS MC is an Office 365 secured Minecraft server for Seattle Public Schools students. It uses the SPS microsoft accounts to verify if a player is actually a part of Seattle Public Schools.",
+          "SPS MC is an Office 365 secured Minecraft server for Seattle Public Schools students. It uses the Office365 API to verify if a player is actually a part of Seattle Public Schools.",
         url: "https://spsmc.net",
       },
       {
@@ -73,7 +73,7 @@ var app = new Vue({
       {
         title: "3D Art",
         description:
-          "In my free time, I like doing 3D modeling. It's a skill I want to continue to improve even if it's just for fun. Check out my artstation page at the link below.",
+          "In my free time, I like doing 3D modeling. It's a skill I want to continue to improve even if it's just for fun. Check out my Artstation page at the link below.",
         url: "https://www.artstation.com/nlaha",
       },
     ],
