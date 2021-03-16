@@ -1,0 +1,117 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat&display=swap");
+
+/* HEADER */
+.site-title {
+  margin: auto;
+  font-size: 6em;
+  font-family: "DM Serif Text", serif;
+  color: #293241;
+}
+
+.site-subtitle {
+  font-size: 2em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #293241;
+}
+
+.header-div {
+  margin: auto;
+  margin-bottom: 2.5em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title-container {
+  margin: auto;
+  min-width: 700px;
+  margin-left: 0;
+}
+
+.social-container {
+  margin: auto;
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  .social-container {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+
+.social-container a {
+  float: right;
+  font-size: 2em;
+  margin: 0.15em;
+  color: #981e32;
+}
+
+.social-container a:hover {
+  color: #293241;
+}
+
+/* CONTENT */
+.panel-heading {
+  font-family: "DM Serif Text", serif;
+  background-color: #ffffff;
+  color: #981e32;
+  font-size: 1.95em;
+  font-weight: 500;
+}
+
+.panel-block {
+  margin: auto;
+  padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: 1.15em;
+  color: #003049;
+  font-family: "Montserrat", sans-serif;
+}
+
+.panel-title {
+  width: 100%;
+  margin: auto;
+  font-size: 1.25em;
+}
+
+.panel-description {
+  width: 100%;
+  margin: auto;
+}
+
+.panel-content {
+  padding: 0.5em;
+  width: 100%;
+  margin: auto;
+}
+
+.panel-button {
+  margin-top: 1.2em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+
+.skill-level {
+  width: 100%;
+  margin: auto;
+}
+
+.skill-level::-webkit-progress-value {
+  background-color: #e0dddd;
+}
+
+.skill-container {
+  width: 100%;
+  margin: auto;
+}
+
+.panel {
+  background-color: #ffffff;
+}
+
+footer {
+  background-color: #ffffff !important;
+}
