@@ -8,11 +8,11 @@ var app = new Vue({
       },
       {
         name: "C# and C++ Game Development",
-        level: "80",
+        level: "85",
       },
       {
         name: "Linux Server Configuration",
-        level: "85",
+        level: "70",
       },
       {
         name: "Azure DevOps Project Management",
