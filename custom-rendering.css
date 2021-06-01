@@ -1,19 +1,19 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 /* HEADER */
 .site-title {
   margin: auto;
   font-size: 6em;
   font-family: "DM Serif Text", serif;
-  color: #293241;
+  color: #ffffff;
 }
 
 .site-subtitle {
   font-size: 2em;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  color: #293241;
+  color: #ffffff;
 }
 
 .header-div {
@@ -42,7 +42,7 @@
 }
 
 .social-container a:hover {
-  color: #293241;
+  color: #322741;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -79,11 +79,10 @@
 
 /* CONTENT */
 .panel-heading {
-  font-family: "DM Serif Text", serif;
-  background-color: #ffffff;
-  color: #981e32;
-  font-size: 1.95em;
-  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+  background-color: #18131f;
+  color: #ffffff;
+  font-size: 2.4em;
 }
 
 .panel-block {
@@ -92,7 +91,8 @@
   padding-left: 2em;
   padding-right: 2em;
   font-size: 1.15em;
-  color: #003049;
+  color: #ffffff;
+  border: 0 !important;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -105,6 +105,7 @@
 .panel-description {
   width: 100%;
   margin: auto;
+  line-height: 2em;
 }
 
 .panel-content {
@@ -134,14 +135,20 @@
 }
 
 .panel {
-  background-color: #ffffff;
+  background-color: #18131f;
 }
 
 footer {
-  background-color: #ffffff !important;
+  background-color: #110e1b !important;
 }
 
-.wsu-icon {
-  width: 30px;
-  vertical-align: middle;
+body {
+  background-color: #191528 !important;
+}
+
+.threecanvas {
+  position: fixed;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
 }

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nathan Laha - 3D Rendering</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="./custom-rendering.css">
+    <link rel="stylesheet" href="./animations.css">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</head>
+
+<body class="light-mode">
+    <canvas id="c" class="threecanvas"></canvas>
+    <section class="section" id="app">
+        <div class="container">
+            <div class="header-div">
+                <div class="title-container">
+                    <h1 class="title site-title fadeIn">
+                        3D Rendering
+                    </h1>
+                    <p class="subtitle site-subtitle fadeIn">
+                        An intro to the technical world of 3D computer graphics
+                    </p>
+                </div>
+            </div>
+
+            <nav class="panel fadeIn">
+                <p class="panel-heading">
+                    Hardware
+                </p>
+                <div class="panel-block">
+                    <div class="panel-content">
+                        <p class="panel-description">
+                            Modern computers are made up of several key components, it's important to understand how
+                            these components interact and operate before diving into how 3D graphics are rendered on
+                            your computer screen.
+                        </p>
+                        <br><br>
+                        <h3 class="panel-title">The CPU</h3>
+                        <p class="panel-description">In computers, the CPU (central processing unit) is responsible for
+                            the majority of basic processing. It's purpose is to link all the other computer components
+                            together, process data and facilitate tranfer. CPUs are programmed to perform computational
+                            tasks billions of times a second. Modern CPUs usually execute 3-5 billion tasks every
+                            second.
+                            <br>
+                            <br>
+                            While this may sound impossible, these tasks are usually extremely basic binary math
+                            operations or comparisons. These simple math operations can be combined to create more
+                            complex math operations until finally you're opening a word document while checking your
+                            email. Everything in a computer is represented as numbers behind the scenes, and those
+                            numbers can be further broken down to their binary representations, this is what the CPU
+                            sees at the lowest level.
+                            <br>
+                            <br>
+                            The columns below are equivalent:
+                        <table style="border: 0; width: 100%;" border="3">
+                            <tbody>
+                                <tr style="height: 18px;">
+                                    <td style="width: 33.3333%; height: 18px;">Text</td>
+                                    <td style="width: 33.3333%; height: 18px;">Numeric Representation</td>
+                                    <td style="width: 33.3333%; height: 18px;">Binary Representation</td>
+                                </tr>
+                                <tr style="height: 18px;">
+                                    <td style="width: 33.3333%; height: 18px;">A</td>
+                                    <td style="width: 33.3333%; height: 18px;">65</td>
+                                    <td style="width: 33.3333%; height: 18px;">1000001</td>
+                                </tr>
+                        </table>
+                        </tbody>
+                        <br><br>
+                        Think of it like morse code but for machines.
+                        <br><br>
+                        Every single component in a computer is linked to the CPU in some way, you can think of the
+                        CPU as the main controller. It coordinates tasks and makes sure there are
+                        no virtual "traffic jams".
+                        </p>
+                        <br><br>
+                        <h3 class="panel-title">The RAM</h3>
+                        <p class="panel-description">
+                            The CPU is only reponsible for processing data and has very little internal storage for
+                            scratch use. When humans solve complex math problems they usually require some scratch paper
+                            to work out the problem. CPUs are no different and they require a place to put numbers while
+                            they work.
+                            <br><br>
+                            When they run out of internal CPU storage (L1-L3 cache) they start using the "scratch paper"
+                            known as Random Access Memory or RAM for short. This is separate from where you store
+                            documents and other files on your computer, RAM is reserved for CPU use as it is
+                            extremely fast but cannot persist data through power loss. Once the RAM loses power, all of
+                            it's contents are lost forever. This is why I compared it to scratch paper, the CPU only
+                            uses it to store data that is critical to the currently running task or tasks.
+                        </p>
+                        <br><br>
+                        <h3 class="panel-title">The GPU</h3>
+                        <p class="panel-description">
+                            While CPUs are great and were used as the sole processing unit up until 1999, they have one
+                            major flaw. CPUs are good
+                            for single complex tasks such as computing one large math equation or fetching data from a
+                            website but have limited
+                            multi-processing ability. Even modern CPUs fall short when asked to process many small
+                            operations at the same time.
+                            <br>
+                            <br>
+                            However, in the late 90s, the public started demanding more of computers. They didn't want
+                            glorified calculators and
+                            data storage systems, they wanted to edit digital photos, play games, and even watch videos.
+                            Computer monitors, even in
+                            the 90s were made up of hundreds of thousands of pixels, each pixel representing a single
+                            dot of color with anywhere
+                            from 8 to the 1.2 billion color shades we have today.
+                            <br>
+                            <br>
+                            For example, a video stored on a computer is composed of many still images called "frames"
+                            that are played back in
+                            sequence to create the illusion of movement. It's very similar to a filmstrip or stop motion
+                            animation but in the
+                            digital world.
+                            <br>
+                            <br>
+                            This is where older computers ran into problems. If your monitor had 1024 by 768 pixels
+                            (totaling roughly 786,000
+                            pixels) and each pixel could output one of 32768 possible colors (a common amount at the
+                            time), your computer would need
+                            to update every single one of those pixels with the color data from the next frame of video.
+                            And even more problematic,
+                            if your video is running at 24 frames per second (the industry standard for movies) you will
+                            need to update the entire
+                            screen 24 times a second.
+                            <br>
+                            <br>
+                            This was a colossal waste of processing time, setting the color of a pixel on the screen was
+                            easy, it took nanoseconds
+                            even in the 90s, so the real problem wasn't how fast the CPU was, but its limited ability to
+                            process tasks in parallel.
+                            <br>
+                            <br>
+                            Researchers at NVIDIA came up with a solution to this problem, they developed the GPU
+                            (graphics processing unit), the
+                            first GPU was essentially hundreds of really small CPUs that couldn't do much on their own
+                            but when combined into a
+                            collective could complete parallel processing tasks significantly faster than the CPU.
+                            <br>
+                            <br>
+                            Now, rather than going through each pixel on the screen one by one for a single video frame,
+                            the GPU could update
+                            hundreds or thousands of pixels at the same time.
+                            <br>
+                            <br>
+                            The GPU, however, doesn't replace the CPU. Its many processing "cores," while fast in
+                            parallel, are not good at
+                            processing single complex tasks like the CPU is. GPUs in the modern computer are often
+                            either attached to the CPU
+                            directly or in higher-end systems available as an add-on card. Almost every computer with a
+                            display has some sort of
+                            GPU, our phones for example have GPUs packed in right next to the CPU so you can watch
+                            Netflix or play games without
+                            issue.
+                            <br>
+                            <br>
+                            Now, GPUs are used more than ever, even if you don't realize it. Artificial Intelligence and
+                            Machine Learning
+                            applications are easily executed in parallel allowing them to run on GPUs at a significantly
+                            higher speed than they
+                            would on a competing CPU.
+                        </p>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="panel fadeIn">
+                <p class="panel-heading">
+                    Data Storage
+                </p>
+                <div class="panel-block">
+                    <div class="panel-content">
+                        <h3 class="panel-title">The Mesh</h3>
+                        <p class="panel-description">On computers, a 3D model or "mesh" is commonly stored as a
+                            collection of vertices, faces and other per-vertex data.
+                            <br><br>
+                            To create a basic 3D model and display it on the screen, computers must have two basic sets
+                            of data. They must have a list of vertex positions describing where in 3D space each vertex
+                            is, usually each vertex is just represented as a 3 dimensional coordinate (or more commonly
+                            referred to as a 3D Vector).
+                            <br><br>
+                            For example, a single vertex might be represented like this: (x, y, z)
+                            <br>
+                            Where x, y and z are the coordinates of the vertex.
+                            <br><br>
+                            However, vertex positions aren't all that is needed, we also need to tell the computer where
+                            to put the faces of the mesh. This is done by connecting the vertices that make up a face,
+                            think of it like connect the dots.
+                            <br>
+                            <br>
+                            How do we tell the computer we want vertex 1 connected to vertex 2? It's simple, each vertex
+                            is given a number called an "index". Then, we send the computer a list of indices that
+                            define
+                            the order in which to connect the vertices to each other. For example, if I wanted to
+                            connect 3 vertices in this order:
+                            <br>
+                            <br>
+                            Vertex 1 -> Vertex 3 -> Vertex 2 -> Vertex 1
+                            <br>
+                            <br>
+                            I would define the indices list like this (1, 3, 2, 1)
+                            <br>
+                            It's important to get the order of the vertex indices correct, if the 3D model has
+                            improperly
+                            defined indicies it may not render faces correctly.
+                            <br>
+                            <br>
+                            The computer can now create the vertices and connect them to form the mesh and resulting 3D
+                            object. Other data is usually sent with each vertex like the "normal" and the "texture
+                            coordinate" (also known as UV) this extra data helps with more advanced rendering where
+                            lighting or texturing is required.
+
+                            This data is usually defined in a file on the hard drive, sent to the CPU and then
+                            dispatched to the GPU for rendering.
+                        </p>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="panel fadeIn">
+                <p class="panel-heading">
+                    Rendering
+                </p>
+                <div class="panel-block">
+                    <div class="panel-content">
+                        <h3 class="panel-title">The Shader</h3>
+                        <p class="panel-description">Creating a 3D mesh is one thing, but displaying it with physically
+                            accurate lighting and texturing is another. The GPU, being a sort of processor can be
+                            programmed, modern GPUs run code written in what we now call a "shader". Shaders are files
+                            containing instructions for the GPU, they define how an object will look when light shined
+                            on it, or how a texture will be applied to the face of a mesh. Shaders are critical to any
+                            3D rendering application as they tell the GPU how to interpret the raw mesh data mentioned
+                            above and display it on the screen as something we would recognize as a 3D model.
+                            <br><br>
+                            Shaders are like little programs running exclusively on the GPU, shader languages are
+                            designed for parallelism in mind and can be used to display complex graphics without the
+                            CPU's help.
+                            <br><br>
+                            For an example of what shaders are capable of, check out <a
+                                href="https://shadertoy.com">ShaderToy</a>, they provide a list of community created
+                            shaders you can try out in your web browser.
+
+                            Here's a fairly sophisticated 3D black hole shader, click the play icon at the bottom of the
+                            window below to run the shader:
+                            <br><br>
+                            <iframe width="100%" height="360" frameborder="0"
+                                src="https://www.shadertoy.com/embed/XdjXDy?gui=true&t=10&paused=true&muted=false"
+                                allowfullscreen></iframe>
+                        </p>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="panel fadeIn">
+                <p class="panel-heading">
+                    Advanced Technologies
+                </p>
+                <div class="panel-block">
+                    <div class="panel-content">
+                        <h3 class="panel-title">Compute Shaders</h3>
+                        <p class="panel-description">For math operations that are optimized for parallel processing, it
+                            may be significantly faster to run them on the GPU. While GPUs normally take input from the
+                            CPU and output it directly to your computer monitor. A special type of shader commonly
+                            referred to as a "compute shader" can be used to output data from the GPU back to the CPU
+                            for further (synchronous) processing.</p>
+                        <br>
+                        <br>
+                        <h3 class="panel-title">Ray Tracing/Path Tracing</h3>
+                        <p class="panel-description">Ray tracing and path tracing involve simulating (with much less
+                            detail) the movement and energy of photons according to physics. This create extremely
+                            realistic lighting but is also very diffucult for a computer to process, one 3D rendered
+                            image would involve simulating billions of photons bouncing, diffusing and refracting off
+                            objects in the scene. For this reason, ray and path traced rendering technologies are
+                            normally only used in animations where computation speed doesn't matter as much as in a
+                            video game.</p>
+                        <br>
+                        However, this is changing quickly. In recent years, high-end GPUs have become so powerful that
+                        ray tracing can be done in real-time. This allows for extremely realistic video game
+                        environments where lighting is accurately represented using physics.
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                Copyright &copy;
+                <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                </script> nlaha.com
+            </p>
+        </div>
+    </footer>
+
+    <script src="three.js"></script>
+    <script>
+        const getRandomParticelPos = (particleCount) => {
+            const arr = new Float32Array(particleCount * 3);
+            for (let i = 0; i < particleCount; i++) {
+                arr[i] = (Math.random() - 0.5) * 10;
+            }
+            return arr;
+        };
+
+        const resizeRendererToDisplaySize = (renderer) => {
+            const canvas = renderer.domElement;
+            const width = canvas.clientWidth;
+            const height = canvas.clientHeight;
+            const needResize = canvas.width !== width || canvas.height !== height;
+            // resize only when necessary
+            if (needResize) {
+                //3rd parameter `false` to change the internal canvas size
+                renderer.setSize(width, height, false);
+            }
+            return needResize;
+        };
+
+        // mouse
+        let mouseX = 0;
+        let mouseY = 0;
+        document.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        const main = () => {
+            // look up the canvas
+            const canvas = document.getElementById("c");
+            // create a WebGLRenderer
+            const renderer = new THREE.WebGLRenderer({ canvas });
+            renderer.setClearColor(new THREE.Color("#1c1624"));
+
+            //field of view - 75deg vertical
+            const fov = 75;
+
+            // default a canvas is 300x150 pixels
+            // which makes the aspect 300/150 or 2.
+            const aspect = 2;
+            const near = 0.1;
+            const far = 5;
+            // create a PerspectiveCamera
+            const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+
+            // camera defaults to looking down the -Z axis with +Y up
+            // so we need to move the camera back a little from
+            // the origin in order to see anything
+            camera.position.z = 2;
+
+            const scene = new THREE.Scene();
+
+            // create a light source
+            const color = 0xffffff;
+            const intensity = 1;
+            const light = new THREE.DirectionalLight(color, intensity);
+            light.position.set(-1, 2, 4);
+            scene.add(light);
+
+            // create a BoxGeometry
+            const boxWidth = 1;
+            const boxHeight = 1;
+            const boxDepth = 1;
+            // const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+            const geometry = new THREE.BufferGeometry();
+            const noOfPoints = 500; //1500;
+            geometry.setAttribute(
+                "position",
+                new THREE.BufferAttribute(getRandomParticelPos(noOfPoints), 3)
+            );
+
+            const loader = new THREE.TextureLoader();
+            // create a basic material and set its color
+            // const material = new THREE.MeshBasicMaterial({ color: 0x44aa88 });
+            const material = new THREE.PointsMaterial({
+                size: 0.05
+                // map: loader.load(
+                //   "https://raw.githubusercontent.com/Kuntal-Das/textures/main/sp2.png"
+                // ),
+                // transparent: true
+                // color: 0x44aa88
+            });
+
+            // create a Mesh
+            const cube = new THREE.Points(geometry, material);
+
+            scene.add(cube);
+            const render = (time) => {
+                time *= 0.001; //in seconds
+
+                if (resizeRendererToDisplaySize(renderer)) {
+                    const canvas = renderer.domElement;
+                    // changing the camera aspect to remove the strechy problem
+                    camera.aspect = canvas.clientWidth / canvas.clientHeight;
+                    camera.updateProjectionMatrix();
+                }
+
+                cube.rotation.x = mouseY * 0.005;
+                cube.rotation.y = mouseX * 0.005;
+
+                // cube.position.x = mouseX * 0.0001;
+                // cube.position.y = mouseY * -0.0001;
+
+                // render the scene
+                renderer.render(scene, camera);
+                // loop
+                requestAnimationFrame(render);
+            };
+            requestAnimationFrame(render);
+        };
+        main();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./app.js" type="module"></script>
+</body>
+
+</html>
