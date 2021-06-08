@@ -80,6 +80,7 @@ var app = new Vue({
         title: "Digital Filmmaking",
         description:
           'I\'ve been in the Ballard High School digital filmmaking program for a total of 4 years now. My animation "Time Tower" won awards at the Northwest High School Film Festival and the National Academy of Television Arts and Sciences - Northwest Emmy Awards.',
+        url: "https://vimeo.com/559140574",
       },
     ],
   },
