@@ -76,6 +76,11 @@ var app = new Vue({
           "In my free time, I like doing 3D modeling. It's a skill I want to continue to improve even if it's just for fun. Check out my Artstation page at the link below.",
         url: "https://www.artstation.com/nlaha",
       },
+      {
+        title: "Digital Filmmaking",
+        description:
+          'I\'ve been in the Ballard High School digital filmmaking program for a total of 4 years now. My animation "Time Tower" won awards at the Northwest High School Film Festival and the National Academy of Television Arts and Sciences - Northwest Emmy Awards.',
+      },
     ],
   },
   methods: {
