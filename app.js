@@ -68,6 +68,12 @@ var app = new Vue({
           "War Map is a work in progress political data visualization tool. It is capable of analyzing election data down to the precinct level.",
         url: "https://map.nlaha.com",
       },
+      {
+        title: "Japanese Art Swords",
+        description:
+          "A fully custom website I made using CraftCMS, I wrote a python script to scrape and import data from the old drupal site.",
+        url: "https://japaneseartswords.com"
+      },
     ],
     art: [
       {
