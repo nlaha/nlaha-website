@@ -20,11 +20,11 @@ var app = new Vue({
       },
       {
         name: "Data Science (Python & R)",
-        level: "50",
+        level: "60",
       },
       {
         name: "HTML and CSS Web Design",
-        level: "60",
+        level: "50",
       },
       {
         name: "JAVA Programming",
@@ -32,7 +32,7 @@ var app = new Vue({
       },
       {
         name: "SQL and NoSQL databases",
-        level: "70",
+        level: "50",
       },
     ],
     experiences: [
