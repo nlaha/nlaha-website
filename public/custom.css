@@ -146,15 +146,15 @@ footer {
 }
 
 .photography-container {
-  margin-top: 1em;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1em !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
 }
 
 .photography-tile {
-  margin: 0.5rem;
+  margin: 0.5rem !important;
 }
 
 .photography-container img {
-  border-radius: 5px;
+  border-radius: 5px !important;
 }
