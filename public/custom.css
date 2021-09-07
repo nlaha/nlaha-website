@@ -1,19 +1,47 @@
 /* FONTS */
+
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat&display=swap");
+
+/* Define styles for the default root window element */
+:root {
+  --background-color-primary: #ffffff;
+  --background-color-secondary: #e0dddd;
+  --background-color-tertiary: #f6f6f6;
+  --background-color-tertiary2: #f7f7f7;
+  --accent-color: #981e32;
+  --text-primary-color: #293241;
+  --element-size: 4rem;
+  --shadow-color: rgba(0, 0, 0, 0.11);
+}
+
+/* Define styles for the root window with dark - mode preference */
+:root.dark-theme {
+  --background-color-primary: #131313;
+  --background-color-secondary: #811a2b;
+  --background-color-tertiary: #111111;
+  --background-color-tertiary2: #121212;
+  --accent-color: #981e32;
+  --text-primary-color: #ddd;
+  --shadow-color: rgba(0, 0, 0, 0.11);
+}
+
+#app {
+  background-color: var(--background-color-tertiary);
+}
 
 /* HEADER */
 .site-title {
   margin: auto;
   font-size: 6em;
   font-family: "DM Serif Text", serif;
-  color: #293241;
+  color: var(--text-primary-color);
 }
 
 .site-subtitle {
   font-size: 2em;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  color: #293241;
+  color: var(--text-primary-color);
 }
 
 .header-div {
@@ -38,11 +66,64 @@
   float: right;
   font-size: 2em;
   margin: 0.15em;
-  color: #981e32;
+  color: var(--accent-color);
+}
+
+.dark-mode-button {
+  float: right !important;
+  font-size: 2em;
+  margin: 0.25em;
+  color: var(--accent-color);
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.dark-mode-button span {
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--background-color-tertiary);
+  z-index: 1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--background-color-secondary);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+.dark-mode-button-container {
+  position: absolute;
+  top: 1.5em;
+  right: 0;
+  z-index: 2345;
+  background-color: var(--background-color-primary);
+  height: 5em;
+  width: 60px;
+  margin-right: 0;
+  margin-left: auto;
+  border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;
+  box-shadow: var(--shadow-color) 0px 0px 10px;
+}
+
+.dark-mode-button:hover {
+  color: var(--text-primary-color);
 }
 
 .social-container a:hover {
-  color: #293241;
+  color: var(--text-primary-color);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -80,8 +161,8 @@
 /* CONTENT */
 .panel-heading {
   font-family: "DM Serif Text", serif;
-  background-color: #ffffff;
-  color: #981e32;
+  background-color: var(--background-color-primary);
+  color: var(--accent-color);
   font-size: 1.95em;
   font-weight: 500;
 }
@@ -92,8 +173,9 @@
   padding-left: 2em;
   padding-right: 2em;
   font-size: 1.15em;
-  color: #003049;
+  color: var(--text-primary-color);
   font-family: "Montserrat", sans-serif;
+  border-bottom: 13px solid var(--background-color-tertiary2) !important;
 }
 
 .panel-title {
@@ -105,6 +187,7 @@
 .panel-description {
   width: 100%;
   margin: auto;
+  margin-bottom: 0.5em;
 }
 
 .panel-content {
@@ -117,6 +200,15 @@
   margin-top: 1.2em;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
+  background-color: var(--background-color-primary) !important;
+  border-color: var(--text-primary-color) !important;
+  color: var(--text-primary-color) !important;
+}
+
+.panel-button:hover {
+  background-color: var(--text-primary-color) !important;
+  border-color: var(--background-color-primary) !important;
+  color: var(--background-color-primary) !important;
 }
 
 .skill-level {
@@ -125,7 +217,11 @@
 }
 
 .skill-level::-webkit-progress-value {
-  background-color: #e0dddd;
+  background-color: var(--background-color-secondary);
+}
+
+.skill-level::-webkit-progress-bar {
+  background-color: var(--background-color-tertiary);
 }
 
 .skill-container {
@@ -134,11 +230,11 @@
 }
 
 .panel {
-  background-color: #ffffff;
+  background-color: var(--background-color-primary);
 }
 
 footer {
-  background-color: #ffffff !important;
+  background-color: var(--background-color-primary) !important;
 }
 
 .wsu-icon {

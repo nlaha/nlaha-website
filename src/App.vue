@@ -1,5 +1,11 @@
 <template>
-  <div class="container">
+  <div class="dark-mode-button-container">
+    <button className="dark-mode-button" v-on:click="toggleDarkMode">
+      <span v-if="darkMode"><ion-icon name="sunny"></ion-icon></span>
+      <span v-else><ion-icon name="moon"></ion-icon></span>
+    </button>
+  </div>
+  <div class="container section">
     <div class="header-div">
       <div class="title-container">
         <h1 class="title site-title fadeIn">Nathan Laha</h1>
@@ -22,7 +28,6 @@
         </a>
       </div>
     </div>
-
     <nav class="panel fadeIn">
       <p class="panel-heading">Education & Experience</p>
       <div
@@ -50,7 +55,8 @@
       <div class="panel-block">
         <div class="skill-container">
           <p class="panel-title">
-            Sorted by proficiency and experience in descending order.
+            Sorted by proficiency and experience in descending order. Relative
+            to my overall level of experience.
           </p>
           <div
             class="panel-content"
@@ -145,6 +151,8 @@ export default {
   components: {},
   data() {
     return {
+      darkMode: false,
+      userTheme: "light-theme",
       photography: {
         description: `
             Every year in the summer I go hiking around the pacific northwest,
@@ -256,8 +264,29 @@ export default {
   },
   mounted() {
     this.sortSkils();
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      this.darkMode = true;
+      this.setTheme("dark-theme");
+    }
   },
   methods: {
+    setTheme(theme) {
+      localStorage.setItem("user-theme", theme);
+      this.userTheme = theme;
+      document.documentElement.className = theme;
+    },
+    toggleDarkMode() {
+      this.darkMode = !this.darkMode;
+      console.log(`Switching dark mode to: ${this.darkMode}`);
+      if (this.darkMode) {
+        this.setTheme("dark-theme");
+      } else {
+        this.setTheme("light-theme");
+      }
+    },
     sortSkils() {
       this.skills.sort((a, b) => (a.level < b.level ? 1 : -1));
     },
