@@ -214,16 +214,28 @@ export default {
           url: "",
         },
         {
-          title: "UW Medicine - Temporary Work",
-          description:
-            "Assisted Laboratory Medicine Informatics with some data science and visualization programming in both a volunteer position and a paid position.",
-          url: "",
-        },
-        {
           title: "BHS General Computing Club",
           description:
             "Leader of the BHS General Computing Club (GCC). At GCC we create a space where people of all skill levels can learn about software/game development, data science and graphic art.",
           url: "https://gcc.nlaha.com",
+        },
+        {
+          title: "UW Medicine - Volunteer Work",
+          description:
+            "Assisted Laboratory Medicine Informatics with a variety of small Python and R tasks over the course of a year.",
+          url: "",
+        },
+        {
+          title: "UW Medicine - Temporary Work",
+          description:
+            "Currently working in a temporary position expanding on my previous volunteer position with Laboratory Medicine Informatics. I'm currently working on data science projects using Python, R and SQL.",
+          url: "",
+        },
+        {
+          title: "Washington State University - B.Sc. CS",
+          description:
+            "Working towards a bachelor of science in computer science from the WSU Voiland College of Engineering and Architecture.",
+          url: "https://school.eecs.wsu.edu/academics/undergraduate-program/computer-science/",
         },
       ],
       programming: [
@@ -232,19 +244,53 @@ export default {
           description:
             "SPS MC is an Office 365 secured Minecraft server for Seattle Public Schools students. It uses the Office365 API to verify if a player is actually a part of Seattle Public Schools.",
           url: "https://spsmc.net",
+          photos: [
+            
+          ],
         },
         {
           title: "War Map",
           description:
             "War Map is a work in progress political data visualization tool. It is capable of analyzing election data down to the precinct level.",
-          url: "https://map.nlaha.com",
+          url: "https://map.nlaha.com",          
+          photos: [
+            
+          ],
         },
         {
           title: "Japanese Art Swords",
           description:
             "A fully custom website I made using CraftCMS, I wrote a python script to scrape and import data from the old drupal site.",
           url: "https://japaneseartswords.com",
+          photos: [
+            
+          ],
         },
+        {
+          title: "SkyMeshGLTF",
+          description:
+            "A VERY work in progress bulk conversion utility for converting Skyrim .nif files into .gltf files, currently functional but not ready for production.",
+          url: "https://github.com/nlaha/SkyMeshGLTF",
+          photos: [
+            
+          ],
+        },
+        {
+          title: "Void World",
+          description:
+            "Working with 4 other programmers and level designers, I took on the role of engine programmer and lead artist to create a first person puzzle game. We spent a year working on this during the height of COVID and while we didn't feel the end product was ready to be put on the market, it's a good showcase of my technical and artistic ability. I created it in Unreal Engine and built a modular C++ framework so that puzzle elements could be easily added by our level desiners. I created all the art assets myself using a combination of Blender, Substance Painter and Quixel Mixer/Megascans.",
+          url: "",
+          photos: [
+            "void_world/Items.png",
+            "void_world/Items (1).png",
+            "void_world/Items (2).png",
+            "void_world/Items (3).png",
+            "void_world/Items (4).png",
+            "void_world/Items (5).png",
+            "void_world/Items (6).png",
+            "void_world/Items (7).png",            
+          ],
+        }
       ],
       art: [
         {
@@ -256,7 +302,7 @@ export default {
         {
           title: "Digital Filmmaking",
           description:
-            'I\'ve been in the Ballard High School digital filmmaking program for a total of 4 years now. My animation "Time Tower" won awards at the Northwest High School Film Festival and the National Academy of Television Arts and Sciences - Northwest Emmy Awards.',
+            'I graduated the digital filmmaking program at BHS with a department scholar award. In this program I learned how to create high quality productions and work in a team effectively, even in stressful situations. My animation "Time Tower" won awards at the Northwest High School Film Festival and the National Academy of Television Arts and Sciences - Northwest Emmy Awards.',
           url: "https://vimeo.com/559140574",
         },
       ],
