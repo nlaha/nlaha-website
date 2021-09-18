@@ -275,6 +275,13 @@ export default {
           photos: [],
         },
         {
+          title: "NOS",
+          description:
+            "A simple and work-in-progress operating system I made for educational purposes. Currently just runs Conway's Game of Life on boot.",
+          url: "https://github.com/nlaha/NOS",
+          photos: [],
+        },      
+        {
           title: "SkyMeshGLTF",
           description:
             "A VERY work in progress bulk conversion utility for converting Skyrim .nif files into .gltf files, currently functional but not ready for production.",
