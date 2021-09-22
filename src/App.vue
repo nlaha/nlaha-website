@@ -26,6 +26,9 @@
         <a href="https://www.facebook.com/nathan.laha.3">
           <ion-icon name="logo-facebook"></ion-icon>
         </a>
+        <a href="https://www.linkedin.com/in/nlaha">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
       </div>
     </div>
     <nav class="panel fadeIn">
