@@ -165,7 +165,7 @@
   font-family: "DM Serif Text", serif;
   background-color: var(--background-color-primary);
   color: var(--accent-color);
-  font-size: 1.95em;
+  font-size: 2.3em;
   font-weight: 500;
 }
 
@@ -255,4 +255,17 @@ footer {
 
 .photography-container img {
   border-radius: 5px !important;
+}
+
+.resume-download-link {
+  font-size: 1.5em !important;
+  background-color: var(--background-color-primary) !important;
+  border-radius: 5px !important;
+  padding: 0.5em !important;
+  transition: 0.4s;
+}
+
+.resume-download-link:active {
+  box-shadow: none !important;
+  transition: 0.4s;
 }

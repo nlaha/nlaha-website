@@ -163,7 +163,7 @@ function exportSiteAsPDF(data) {
                             after: 130,
                         },
                     }),
-                    ...data.programming.slice(0, 5) // get just top 3 projects
+                    ...data.programming
                         .map((project) => {
                             const arr = [];
 

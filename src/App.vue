@@ -15,20 +15,29 @@
       </div>
       <div class="social-container fadeIn">
         <a href="https://vcea.wsu.edu">
-          <img class="wsu-icon" src="wsu.svg" />
+          <img class="wsu-icon" src="wsu.svg" title="WSU VCEA" />
         </a>
         <a href="https://instagram.com/nathan.laha">
-          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-icon name="logo-instagram" title="Instagram"></ion-icon>
         </a>
         <a href="https://github.com/nlaha">
-          <ion-icon name="logo-github"></ion-icon>
+          <ion-icon name="logo-github" title="GitHub"></ion-icon>
         </a>
         <a href="https://www.facebook.com/nathan.laha.3">
-          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-icon name="logo-facebook" title="Facebook"></ion-icon>
         </a>
         <a href="https://www.linkedin.com/in/nlaha">
-          <ion-icon name="logo-linkedin"></ion-icon>
+          <ion-icon name="logo-linkedin" title="LinkedIn"></ion-icon>
         </a>
+        <a href="mailto:nlaha@outlook.com">
+          <ion-icon name="mail" title="Email"></ion-icon>
+        </a>
+        <div>
+          <a v-on:click="downloadResume" class="resume-download-link panel">
+            Download Resume
+            <ion-icon name="download" title="Resume"></ion-icon>
+          </a>
+        </div>
       </div>
     </div>
     <nav class="panel fadeIn">
@@ -311,7 +320,7 @@ export default {
             "A simple and work-in-progress operating system I made for educational purposes. Currently just runs Conway's Game of Life on boot.",
           url: "https://github.com/nlaha/NOS",
           photos: [],
-        },      
+        },
         {
           title: "SkyMeshGLTF",
           description:
@@ -352,8 +361,6 @@ export default {
       this.darkMode = true;
       this.setTheme("dark-theme");
     }
-
-    exportSiteAsPDF(this);
   },
   methods: {
     setTheme(theme) {
@@ -372,6 +379,9 @@ export default {
     },
     sortSkils() {
       this.skills.sort((a, b) => (a.level < b.level ? 1 : -1));
+    },
+    downloadResume() {
+      exportSiteAsPDF(this);
     },
   },
 };
