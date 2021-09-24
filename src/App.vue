@@ -26,6 +26,9 @@
         <a href="https://www.facebook.com/nathan.laha.3">
           <ion-icon name="logo-facebook"></ion-icon>
         </a>
+        <a href="https://www.linkedin.com/in/nlaha">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
       </div>
     </div>
     <nav class="panel fadeIn">
@@ -302,6 +305,13 @@ export default {
           url: "https://japaneseartswords.com",
           photos: [],
         },
+        {
+          title: "NOS",
+          description:
+            "A simple and work-in-progress operating system I made for educational purposes. Currently just runs Conway's Game of Life on boot.",
+          url: "https://github.com/nlaha/NOS",
+          photos: [],
+        },      
         {
           title: "SkyMeshGLTF",
           description:
