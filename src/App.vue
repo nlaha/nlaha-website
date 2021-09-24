@@ -37,6 +37,9 @@
       >
         <div class="panel-content">
           <h3 class="panel-title">{{ experience.title }}</h3>
+          <h4>
+            <i>{{ experience.date }}</i>
+          </h4>
           <p class="panel-description">{{ experience.description }}</p>
           <a :href="experience.url"
             ><button
@@ -160,6 +163,8 @@
 </template>
 
 <script>
+import { exportSiteAsPDF } from "./ResumeGenerator";
+
 export default {
   name: "App",
   components: {},
@@ -186,6 +191,24 @@ export default {
           "_A7R1667.jpg",
         ],
       },
+      contacts: [
+        {
+          type: "Website",
+          value: "https://nlaha.com",
+        },
+        {
+          type: "Email",
+          value: "nlaha@outlook.com",
+        },
+        {
+          type: "LinkedIn",
+          value: "https://www.linkedin.com/in/nlaha/",
+        },
+        {
+          type: "GitHub",
+          value: "https://github.com/nlaha",
+        },
+      ],
       skills: [
         {
           name: "NodeJS and Javscript (Full Stack)",
@@ -222,48 +245,53 @@ export default {
       ],
       experiences: [
         {
+          title: "Washington State University - B.Sc. CS",
+          date: "2021 - Present",
+          description:
+            "Working towards a Bachelor of Science in computer science from the WSU Voiland College of Engineering and Architecture.",
+          url: "https://school.eecs.wsu.edu/academics/undergraduate-program/computer-science/",
+        },
+        {
           title: "Ballard High School - APCS",
+          date: "2017 - 2021",
           description:
             "My first formal computer science class. Used the JAVA programming language and passed the AP exam with a 5/5.",
           url: "",
         },
         {
           title: "BHS General Computing Club",
+          date: "2019 - 2021",
           description:
             "Leader of the BHS General Computing Club (GCC). At GCC we create a space where people of all skill levels can learn about software/game development, data science and graphic art.",
           url: "https://gcc.nlaha.com",
         },
         {
           title: "UW Medicine - Volunteer Work",
+          date: "2019 - 2020",
           description:
             "Assisted Laboratory Medicine Informatics with a variety of small Python and R tasks over the course of a year.",
           url: "",
         },
         {
           title: "UW Medicine - Temporary Work",
+          date: "2020 - Present",
           description:
             "Currently working in a temporary position expanding on my previous volunteer position with Laboratory Medicine Informatics. I'm currently working on data science projects using Python, R and SQL.",
           url: "",
-        },
-        {
-          title: "Washington State University - B.Sc. CS",
-          description:
-            "Working towards a bachelor of science in computer science from the WSU Voiland College of Engineering and Architecture.",
-          url: "https://school.eecs.wsu.edu/academics/undergraduate-program/computer-science/",
         },
       ],
       programming: [
         {
           title: "SPS MC",
           description:
-            "SPS MC is an Office 365 secured Minecraft server for Seattle Public Schools students. It uses the Office365 API to verify if a player is actually a part of Seattle Public Schools.",
+            "SPS MC is an Office 365 secured Minecraft server for Seattle Public Schools students. It uses the Office365 API to verify if a player is a part of Seattle Public Schools.",
           url: "https://spsmc.net",
           photos: [],
         },
         {
           title: "War Map",
           description:
-            "War Map is a work in progress political data visualization tool. It is capable of analyzing election data down to the precinct level.",
+            "War Map is a work in progress political data visualization tool. It can analyze election data down to the precinct level.",
           url: "https://map.nlaha.com",
           photos: [],
         },
@@ -284,7 +312,7 @@ export default {
         {
           title: "Void World",
           description:
-            "Working with 4 other programmers and level designers, I took on the role of engine programmer and lead artist to create a first person puzzle game. We spent a year working on this during the height of COVID-19 and while we didn't feel the end product was ready to be put on the market, it's a good showcase of my technical and artistic ability. I created it in Unreal Engine and built a modular C++ framework so that puzzle elements could be easily added by our level desiners. I created all the art assets myself using a combination of Blender, Substance Painter and Quixel Mixer/Megascans.",
+            "Working with 4 other programmers and level designers, I took on the role of engine programmer and lead artist to create a first-person puzzle game. We spent a year working on this during the height of COVID-19 and while we didn't feel the product was ready to be put on the market, it's a good showcase of my technical and artistic ability. I created it in Unreal Engine and built a modular C++ framework so that puzzle elements could be easily added by our level designers. I created all the art assets myself using a combination of Blender, Substance Painter and Quixel Mixer/Megascans.",
           url: "",
           photos: ["VW_Items.png", "VW_Items1.png"],
         },
@@ -314,6 +342,8 @@ export default {
       this.darkMode = true;
       this.setTheme("dark-theme");
     }
+
+    exportSiteAsPDF(this);
   },
   methods: {
     setTheme(theme) {

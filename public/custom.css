@@ -23,7 +23,7 @@
   --background-color-tertiary2: #121212;
   --accent-color: #981e32;
   --text-primary-color: #ddd;
-  --shadow-color: rgba(0, 0, 0, 0.11);\
+  --shadow-color: rgba(0, 0, 0, 0.11);
   background-color: var(--background-color-tertiary);
 }
 
