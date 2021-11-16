@@ -1,3 +1,6 @@
+<script setup>
+import VLazyImage from "v-lazy-image";
+</script>
 <template>
   <div class="dark-mode-button-container">
     <button className="dark-mode-button" v-on:click="toggleDarkMode">
@@ -29,6 +32,9 @@
         <a href="https://www.linkedin.com/in/nlaha">
           <ion-icon name="logo-linkedin" title="LinkedIn"></ion-icon>
         </a>
+        <a href="https://app.joinhandshake.com/users/32804032">
+          <div class="handshake-icon" src="Handshake.svg" title="Handshake" />
+        </a>
         <a href="mailto:nlaha@outlook.com">
           <ion-icon name="mail" title="Email"></ion-icon>
         </a>
@@ -44,6 +50,23 @@
       <div class="panel-block">
         <div class="panel-content">
           <p class="panel-description">{{ generic.summary }}</p>
+        </div>
+      </div>
+    </nav>
+    <nav class="panel fadeIn">
+      <div class="panel-block">
+        <div class="panel-content">
+          <p class="panel-description">
+            A quick note, if you would like to download some working demos of my
+            programming projects, or view my full photography portfolio. Please
+            visit my Notion site.
+            <br>
+            <a href="https://njlaha.notion.site/"
+              ><button class="button panel-button is-dark is-outlined">
+                Notion
+              </button>
+            </a>
+          </p>
         </div>
       </div>
     </nav>
@@ -99,7 +122,7 @@
     <nav class="panel fadeIn">
       <p class="panel-heading n-panel-heading">Programming Projects</p>
       <div
-        class="panel-block"
+        class="panel-block spotlight-group"
         v-for="project in programming"
         v-bind:key="project.title"
       >
@@ -123,8 +146,19 @@
               <a
                 class="spotlight image gallery-image"
                 :href="photography.baseDir + image"
+                :data-src-1920="
+                  photography.baseDir +
+                  `${image}`.replace(/\.(jpg|jpeg|png|gif)$/, '-1920.png')
+                "
+                :data-src-2560="
+                  photography.baseDir +
+                  `${image}`.replace(/\.(jpg|jpeg|png|gif)$/, '-2560.png')
+                "
               >
-                <img :src="photography.baseDir + image" />
+                <v-lazy-image
+                  :src="photography.baseDir + image"
+                  src-placeholder="/Placeholder.png"
+                />
               </a>
             </div>
           </div>
@@ -132,7 +166,7 @@
       </div>
     </nav>
 
-    <nav class="panel fadeIn">
+    <nav class="panel fadeIn spotlight-group">
       <p class="panel-heading n-panel-heading">Photography</p>
       <div class="panel-block">
         <div class="panel-content">
@@ -148,8 +182,19 @@
               <a
                 class="spotlight image gallery-image"
                 :href="photography.baseDir + image"
+                :data-src-2560="
+                  photography.baseDir +
+                  `${image}`.replace(/\.(jpg|jpeg|png|gif)$/, '-2560.png')
+                "
+                :data-src-3840="
+                  photography.baseDir +
+                  `${image}`.replace(/\.(jpg|jpeg|png|gif)$/, '-3840.png')
+                "
               >
-                <img :src="photography.baseDir + image" />
+                <v-lazy-image
+                  :src="photography.baseDir + image"
+                  src-placeholder="/Placeholder.png"
+                />
               </a>
             </div>
           </div>
@@ -180,6 +225,16 @@
     </nav>
   </div>
 </template>
+
+<style scoped>
+.v-lazy-image {
+  transition: 2s;
+  opacity: 0;
+}
+.v-lazy-image-loaded {
+  opacity: 1;
+}
+</style>
 
 <script>
 import { exportSiteAsPDF } from "./ResumeGenerator";

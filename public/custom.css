@@ -240,7 +240,13 @@ footer {
 }
 
 .wsu-icon {
-  width: 25px;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  contain: strict;
+  fill: currentcolor;
+  box-sizing: content-box !important;
+  vertical-align: baseline;
 }
 
 .photography-container {
@@ -268,4 +274,22 @@ footer {
 .resume-download-link:active {
   box-shadow: none !important;
   transition: 0.4s;
+}
+
+.handshake-icon {
+  display: inline-block;
+  width: 0.8em;
+  height: 1em;
+  contain: strict;
+  fill: currentcolor;
+  box-sizing: content-box !important;
+  vertical-align: text-top;
+
+  background-color: var(--accent-color);
+  -webkit-mask: url(Handshake.svg) no-repeat center;
+  mask: url(Handshake.svg) no-repeat center;
+}
+
+.handshake-icon:hover {
+  background-color: var(--text-primary-color);
 }
