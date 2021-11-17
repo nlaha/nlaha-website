@@ -3,6 +3,8 @@ node_modules
 /dist
 input_photography/*
 input_photography/
+input_vw/*
+input_vw/
 
 # local env files
 .env.local
