@@ -1,7 +1,8 @@
 .DS_Store
 node_modules
 /dist
-
+input_photography/*
+input_photography/
 
 # local env files
 .env.local
