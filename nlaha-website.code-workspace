@@ -2,6 +2,10 @@
   "folders": [
     {
       "path": "."
+    },
+    {
+      "name": "nlaha-website-2021 @ 8bdfb0e",
+      "uri": "gitlens://8bdfb0e/c:/Users/nlaha/Desktop/Code/nlaha-website-2021?{\"path\":\"/c:/Users/nlaha/Desktop/Code/nlaha-website-2021\",\"ref\":\"8bdfb0e9ce416fc979537f84f32ca2cb772c94e9\",\"repoPath\":\"c:/Users/nlaha/Desktop/Code/nlaha-website-2021\"}"
     }
   ],
   "settings": {}
