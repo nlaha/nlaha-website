@@ -40,7 +40,7 @@ import VLazyImage from "v-lazy-image";
         </a>
         <div>
           <a v-on:click="downloadResume" class="resume-download-link panel">
-            Download Resume
+            Resume
             <ion-icon name="download" title="Resume"></ion-icon>
           </a>
         </div>
@@ -50,17 +50,11 @@ import VLazyImage from "v-lazy-image";
       <div class="panel-block">
         <div class="panel-content">
           <p class="panel-description">{{ generic.summary }}</p>
-        </div>
-      </div>
-    </nav>
-    <nav class="panel fadeIn">
-      <div class="panel-block">
-        <div class="panel-content">
           <p class="panel-description">
             A quick note, if you would like to download some working demos of my
             programming projects, or view my full photography portfolio. Please
             visit my Notion site.
-            <br>
+            <br />
             <a href="https://njlaha.notion.site/"
               ><button class="button panel-button is-dark is-outlined">
                 Notion

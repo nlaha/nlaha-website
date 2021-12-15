@@ -1,6 +1,7 @@
 /* FONTS */
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 
 /* Define styles for the default root window element */
 :root {
@@ -35,14 +36,15 @@
 .site-title {
   margin: auto;
   font-size: 6em;
-  font-family: "DM Serif Text", serif;
+  font-family: "DM Serif Display", serif;
   color: var(--text-primary-color);
+  font-weight: 500;
 }
 
 .site-subtitle {
   font-size: 2em;
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 300;
   color: var(--text-primary-color);
 }
 
@@ -162,7 +164,7 @@
 
 /* CONTENT */
 .panel-heading {
-  font-family: "DM Serif Text", serif;
+  font-family: "DM Serif Display", serif;
   background-color: var(--background-color-primary);
   color: var(--accent-color);
   font-size: 2.3em;
@@ -201,7 +203,7 @@
 .panel-button {
   margin-top: 1.2em;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 300;
   background-color: var(--background-color-primary) !important;
   border-color: var(--text-primary-color) !important;
   color: var(--text-primary-color) !important;
@@ -264,16 +266,16 @@ footer {
 }
 
 .resume-download-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
   font-size: 1.5em !important;
   background-color: var(--background-color-primary) !important;
   border-radius: 5px !important;
   padding: 0.5em !important;
-  transition: 0.4s;
 }
 
 .resume-download-link:active {
   box-shadow: none !important;
-  transition: 0.4s;
 }
 
 .handshake-icon {
