@@ -54,13 +54,21 @@ import VLazyImage from "v-lazy-image";
             A quick note, if you would like to download some working demos of my
             programming projects, or view my full photography portfolio. Please
             visit my Notion site.
-            <br />
-            <a href="https://njlaha.notion.site/"
-              ><button class="button panel-button is-dark is-outlined">
-                Notion
-              </button>
-            </a>
           </p>
+          <p class="panel-description">
+            I also have a blog. But I mainly use for school projects and
+            occasional notes.
+          </p>
+          <a style="margin: 1em" href="https://njlaha.notion.site/"
+            ><button class="button panel-button is-dark is-outlined">
+              Notion
+            </button>
+          </a>
+          <a style="margin: 1em" href="https://blog.nlaha.com/"
+            ><button class="button panel-button is-dark is-outlined">
+              Blog
+            </button>
+          </a>
         </div>
       </div>
     </nav>
