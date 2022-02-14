@@ -28,14 +28,14 @@ function exportSiteAsPDF(data) {
               }),
             ],
           }),
-          new Paragraph({
+          /*new Paragraph({
             heading: HeadingLevel.SUBTITLE,
             children: [
               new TextRun({
                 children: [new TextRun(data.generic.summary)],
               }),
             ],
-          }),
+          }),*/
         ],
       },
       {
@@ -86,7 +86,7 @@ function exportSiteAsPDF(data) {
 
           new Paragraph({
             heading: HeadingLevel.HEADING_2,
-            children: [new TextRun("Education & Exeprience")],
+            children: [new TextRun("Education & Experience")],
             spacing: {
               before: 0,
               after: 130,

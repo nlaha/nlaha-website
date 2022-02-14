@@ -46,7 +46,7 @@ I try to work on personal projects in my free time.
   ],
   skills: [
     {
-      name: "NodeJS and Javscript (Full Stack)",
+      name: "NodeJS and JavaScript (Full Stack)",
       level: "75",
     },
     {
@@ -80,6 +80,20 @@ I try to work on personal projects in my free time.
   ],
   experiences: [
     {
+      title: "UW Medicine - Temporary Work",
+      date: "2020 - Present",
+      description:
+        "Currently working in a temporary position expanding on my previous volunteer position with Laboratory Medicine Informatics. I'm currently working on data science projects using Python, R and SQL.",
+      url: "",
+    },
+    {
+      title: "UW Medicine - Volunteer Work",
+      date: "2019 - 2020",
+      description:
+        "Assisted Laboratory Medicine Informatics with a variety of small Python and R tasks over the course of a year.",
+      url: "",
+    },
+    {
       title: "Washington State University - B.Sc. CS",
       date: "2021 - Present",
       description:
@@ -100,20 +114,6 @@ I try to work on personal projects in my free time.
       description:
         "Leader of the BHS General Computing Club (GCC). At GCC we create a space where people of all skill levels can learn about software/game development, data science and graphic art.",
       url: "https://gcc.nlaha.com",
-    },
-    {
-      title: "UW Medicine - Volunteer Work",
-      date: "2019 - 2020",
-      description:
-        "Assisted Laboratory Medicine Informatics with a variety of small Python and R tasks over the course of a year.",
-      url: "",
-    },
-    {
-      title: "UW Medicine - Temporary Work",
-      date: "2020 - Present",
-      description:
-        "Currently working in a temporary position expanding on my previous volunteer position with Laboratory Medicine Informatics. I'm currently working on data science projects using Python, R and SQL.",
-      url: "",
     },
   ],
   programming: [
@@ -155,7 +155,7 @@ I try to work on personal projects in my free time.
     {
       title: "Void World",
       description:
-        "Working with 4 other programmers and level designers, I took on the role of engine programmer and lead artist to create a first-person puzzle game. We spent a year working on this during the height of COVID-19 and while we didn't feel the product was ready to be put on the market, it's a good showcase of my technical and artistic ability. I created it in Unreal Engine and built a modular C++ framework so that puzzle elements could be easily added by our level designers. I created all the art assets myself using a combination of Blender, Substance Painter and Quixel Mixer/Megascans.",
+        "Working with 4 other programmers and level designers, I took on the role of engine programmer and lead artist to create a first-person puzzle game. We spent a year working on this during the height of COVID-19 and while we didn't feel the product was ready to be put on the market, it's a good showcase of my technical and artistic ability. I created it in Unreal Engine and built a modular C++ framework so that puzzle elements could be easily added by our level designers.",
       url: "",
       photos: ["VW_Items.png", "VW_Items1.png"],
     },
