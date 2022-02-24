@@ -102,6 +102,13 @@ I try to work on personal projects in my free time.
         "https://school.eecs.wsu.edu/academics/undergraduate-program/computer-science/",
     },
     {
+      title: "Crimson Code Hackathon",
+      date: "2022 - 2022",
+      description:
+        "Participated in the 2022 Crimson Code hackathon with a team of 4. Our web app \"Coug Study Network\" won first place and I've since decided to continue the project.",
+      url: "https://dailyevergreen.com/128124/news/students-compete-learn-new-coding-in-annual-hackathon/",
+    },
+    {
       title: "Ballard High School - APCS",
       date: "2017 - 2021",
       description:
@@ -117,6 +124,13 @@ I try to work on personal projects in my free time.
     },
   ],
   programming: [
+    {
+      title: "Coug Study Network",
+      description:
+        "Coug Study Network is a platform for sharing assignment information and study habits. It allows students to make posts about assignments and rate how difficult or time consuming they were. This gives both students and professors valuable information about the classes.",
+      url: "https://wsusn.nlaha.com",
+      photos: [],
+    },
     {
       title: "SPS MC",
       description:
