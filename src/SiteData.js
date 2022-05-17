@@ -3,7 +3,7 @@ var siteData = {
   userTheme: "light-theme",
   generic: {
     summary: `
-I'm a freshman student at Washington State University working on my BS in Computer Science. I've always had a passion for programming and
+I'm a 2nd year student at Washington State University working on my BS in Computer Science. I've always had a passion for programming and
 I try to work on personal projects in my free time.
         `,
   },
