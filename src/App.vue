@@ -98,30 +98,6 @@ import VLazyImage from "v-lazy-image";
     </nav>
 
     <nav class="panel fadeIn">
-      <p class="panel-heading">Skills</p>
-      <div class="panel-block">
-        <div class="skill-container">
-          <p class="panel-title">
-            Sorted by proficiency and experience in descending order. Relative
-            to my overall level of experience.
-          </p>
-          <div
-            class="panel-content"
-            v-for="skill in skills"
-            v-bind:key="skill.name"
-          >
-            <h3 class="panel-description">{{ skill.name }}</h3>
-            <progress
-              class="progress skill-level is-medium"
-              :value="skill.level"
-              max="100"
-            ></progress>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <nav class="panel fadeIn">
       <p class="panel-heading n-panel-heading">Programming Projects</p>
       <div
         class="panel-block spotlight-group"
