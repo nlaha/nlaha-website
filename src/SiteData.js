@@ -83,7 +83,7 @@ I try to work on personal projects in my free time.
       title: "UW Medicine - Temporary Work",
       date: "2020 - Present",
       description:
-        "Currently working in a temporary position expanding on my previous volunteer position with Laboratory Medicine Informatics. I'm currently working on data science projects using Python, R and SQL.",
+        "Currently working in a temporary position expanding on my previous volunteer position with Laboratory Medicine Informatics. I'm currently working on data science and web development projects using Python, R and SQL.",
       url: "",
     },
     {
