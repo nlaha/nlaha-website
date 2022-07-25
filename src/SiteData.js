@@ -50,8 +50,8 @@ I try to work on personal projects in my free time.
       level: "75",
     },
     {
-      name: "C and C++ Programming",
-      level: "70",
+      name: "C and C++",
+      level: "79",
     },
     {
       name: "Linux Server Configuration",
@@ -62,12 +62,12 @@ I try to work on personal projects in my free time.
       level: "25",
     },
     {
-      name: "Data Science (Python & R)",
+      name: "Python",
       level: "85",
     },
     {
       name: "HTML and CSS Web Design",
-      level: "50",
+      level: "80",
     },
     {
       name: "JAVA & C# Programming",
