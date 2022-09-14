@@ -16,7 +16,7 @@ import VLazyImage from "v-lazy-image";
           Computer Science Student @ WSU
         </p>
       </div>
-      <div class="social-container fadeIn">
+      <div class="social-container">
         <a href="https://vcea.wsu.edu">
           <img class="wsu-icon" src="wsu.svg" title="WSU VCEA" />
         </a>
@@ -46,7 +46,7 @@ import VLazyImage from "v-lazy-image";
         </div>
       </div>
     </div>
-    <nav class="panel fadeIn">
+    <nav class="panel">
       <div class="panel-block">
         <div class="panel-content">
           <p class="panel-description">{{ generic.summary }}</p>
@@ -72,7 +72,7 @@ import VLazyImage from "v-lazy-image";
         </div>
       </div>
     </nav>
-    <nav class="panel fadeIn">
+    <nav class="panel">
       <p class="panel-heading">Education & Experience</p>
       <div
         class="panel-block"
@@ -97,7 +97,7 @@ import VLazyImage from "v-lazy-image";
       </div>
     </nav>
 
-    <nav class="panel fadeIn">
+    <nav class="panel">
       <p class="panel-heading n-panel-heading">Programming Projects</p>
       <div
         class="panel-block spotlight-group"
@@ -144,7 +144,7 @@ import VLazyImage from "v-lazy-image";
       </div>
     </nav>
 
-    <nav class="panel fadeIn spotlight-group">
+    <nav class="panel spotlight-group">
       <p class="panel-heading n-panel-heading">Photography</p>
       <div class="panel-block">
         <div class="panel-content">
@@ -180,7 +180,7 @@ import VLazyImage from "v-lazy-image";
       </div>
     </nav>
 
-    <nav class="panel fadeIn">
+    <nav class="panel">
       <p class="panel-heading n-panel-heading">Art Projects</p>
       <div
         class="panel-block"
