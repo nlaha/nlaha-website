@@ -168,7 +168,7 @@ I try to work on personal projects in my free time.
     },
     {
       title: "The Top",
-      description: "Composed an original soundtrack for a game, and provided assistance with programming some more advanced features. It is availible for purchase on Steam.",
+      description: "Composed an original soundtrack for a game, and provided assistance with programming some more advanced features. It is available for purchase on Steam.",
       url: "https://store.steampowered.com/app/2096560/The_Top/",
     },
     {
