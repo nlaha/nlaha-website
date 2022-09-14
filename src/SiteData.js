@@ -167,6 +167,11 @@ I try to work on personal projects in my free time.
       photos: [],
     },
     {
+      title: "The Top",
+      description: "Composed an original soundtrack for a game, and provided assistance with programming some more advanced features. It is availible for purchase on Steam.",
+      url: "https://store.steampowered.com/app/2096560/The_Top/",
+    },
+    {
       title: "Void World",
       description:
         "Working with 4 other programmers and level designers, I took on the role of engine programmer and lead artist to create a first-person puzzle game. We spent a year working on this during the height of COVID-19 and while we didn't feel the product was ready to be put on the market, it's a good showcase of my technical and artistic ability. I created it in Unreal Engine and built a modular C++ framework so that puzzle elements could be easily added by our level designers.",
