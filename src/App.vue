@@ -69,6 +69,11 @@ import VLazyImage from "v-lazy-image";
               Blog
             </button>
           </a>
+          <a style="margin: 1em" href="https://wos.nlaha.com/"
+            ><button class="button panel-button is-dark is-outlined">
+              SSH Bots
+            </button>
+          </a>
         </div>
       </div>
     </nav>
