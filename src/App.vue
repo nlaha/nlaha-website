@@ -39,7 +39,7 @@ import VLazyImage from "v-lazy-image";
           <ion-icon name="mail" title="Email"></ion-icon>
         </a>
         <div>
-          <a v-on:click="downloadResume" class="resume-download-link panel">
+          <a href="https://github.com/nlaha/nlaha-website-2021/raw/main/NathanLaha_Resume.pdf" class="resume-download-link panel">
             Resume
             <ion-icon name="download" title="Resume"></ion-icon>
           </a>
