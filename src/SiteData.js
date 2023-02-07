@@ -3,28 +3,9 @@ var siteData = {
   userTheme: "light-theme",
   generic: {
     summary: `
-I'm a 2nd year student at Washington State University working on my BS in Computer Science. I've always had a passion for programming and
+I'm a 2nd year undergraduate student at Washington State University studying Computer Science. I've always had a passion for programming and
 I try to work on personal projects in my free time.
         `,
-  },
-  photography: {
-    description: `
-            Every year in the summer I go hiking around the pacific northwest,
-            one of my favorite activities while out enjoying nature is taking
-            photos. Below (if my code is working correctly) you should see a
-            gallery of photos taken by me! For more photos, check out my instagram page.
-        `,
-    baseDir: "images/photography/",
-    images: [
-      "_A7R1549-HDR.jpg",
-      "_A7R1183.jpg",
-      "_A7R1685.jpg",
-      "_A7R1726.jpg",
-      "_A7R1727.jpg",
-      "_A7R1736.jpg",
-      "_A7R1170.jpg",
-      "_A7R1667.jpg",
-    ],
   },
   contacts: [
     {
@@ -105,8 +86,9 @@ I try to work on personal projects in my free time.
       title: "Crimson Code Hackathon",
       date: "2022 - 2022",
       description:
-        "Participated in the 2022 Crimson Code hackathon with a team of 4. Our web app \"Coug Study Network\" won first place and I've since decided to continue the project.",
-      url: "https://dailyevergreen.com/128124/news/students-compete-learn-new-coding-in-annual-hackathon/",
+        'Participated in the 2022 Crimson Code hackathon with a team of 4. Our web app "Coug Study Network" won first place.',
+      url:
+        "https://dailyevergreen.com/128124/news/students-compete-learn-new-coding-in-annual-hackathon/",
     },
     {
       title: "Ballard High School - APCS",
@@ -135,14 +117,19 @@ I try to work on personal projects in my free time.
       title: "SPS MC",
       description:
         "SPS MC is an Office 365 secured Minecraft server for Seattle Public Schools students. It uses the Office365 API to verify if a player is a part of Seattle Public Schools.",
-      url: "https://spsmc.net",
+      url: "https://github.com/GCC-Minecraft-Team",
       photos: [],
     },
     {
-      title: "War Map",
+      title: "Equinox Dialogue",
+      description: "A nonlinear dialogue tree generation tool made with React",
+      url: "https://github.com/nlaha/EquinoxDialogue",
+    },
+    {
+      title: "Godot MIDI",
       description:
-        "War Map is a work in progress political data visualization tool. It can analyze election data down to the precinct level.",
-      url: "https://map.nlaha.com",
+        "A custom extension for the Godot game engine allowing for MIDI file import. I wrote the MIDI parser from scratch using the MIDI file format specification",
+      url: "https://github.com/nlaha/godot-midi-4.0",
       photos: [],
     },
     {
@@ -168,7 +155,8 @@ I try to work on personal projects in my free time.
     },
     {
       title: "The Top",
-      description: "Composed an original soundtrack for a game, and provided assistance with programming some more advanced features. It is available for purchase on Steam.",
+      description:
+        "Composed an original soundtrack for a game, and provided assistance with programming some more advanced features. It is available for purchase on Steam.",
       url: "https://store.steampowered.com/app/2096560/The_Top/",
     },
     {
@@ -176,7 +164,6 @@ I try to work on personal projects in my free time.
       description:
         "Working with 4 other programmers and level designers, I took on the role of engine programmer and lead artist to create a first-person puzzle game. We spent a year working on this during the height of COVID-19 and while we didn't feel the product was ready to be put on the market, it's a good showcase of my technical and artistic ability. I created it in Unreal Engine and built a modular C++ framework so that puzzle elements could be easily added by our level designers.",
       url: "",
-      photos: ["VW_Items.png", "VW_Items1.png"],
     },
   ],
   art: [
