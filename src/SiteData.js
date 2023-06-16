@@ -2,10 +2,7 @@ var siteData = {
   darkMode: false,
   userTheme: "light-theme",
   generic: {
-    summary: `
-I'm a 2nd year undergraduate student at Washington State University studying Computer Science. I've always had a passion for programming and
-I try to work on personal projects in my free time.
-        `,
+    summary: `I'm a 3rd-year undergraduate student at Washington State University studying Computer Science. I've always had an interest in computing, and I like working on programming projects in my free time.`,
   },
   contacts: [
     {
@@ -61,10 +58,16 @@ I try to work on personal projects in my free time.
   ],
   experiences: [
     {
+      title: "Premera Blue Cross - Systems Engineering Intern",
+      date: "Summer 2023",
+      description: "Full-time summer internship in systems engineering at Premera Blue Cross.",
+      url: "https://www.premera.com",
+    },
+    {
       title: "UW Medicine - Temporary Work",
       date: "2020 - Present",
       description:
-        "Currently working in a temporary position expanding on my previous volunteer position with Laboratory Medicine Informatics. I'm currently working on data science and web development projects using Python, R and SQL.",
+        "Working in a temporary position expanding on my previous volunteer position with Laboratory Medicine Informatics. I work on data science and web development projects using Python, R and SQL.",
       url: "",
     },
     {
