@@ -64,6 +64,11 @@ var siteData = {
       url: "https://www.premera.com",
     },
     {
+      title: "Teaching Assistant - WSU VCEA",
+      date: "Fall Semester 2023",
+      description: "Working as a TA for the CptS 121 class. I teach a 3-hour lab section once a week."
+    },
+    {
       title: "UW Medicine - Temporary Work",
       date: "2020 - Present",
       description:
