@@ -82,7 +82,7 @@
   margin: 0 !important;
   height: 4rem;
   display: flex;
-  padding: 0 1em;
+  padding: 0 1em !important;
 }
 
 .social-container a {
@@ -90,13 +90,13 @@
   font-size: 2em;
   margin: 0.15em;
   color: var(--accent-color);
-  height: 100%;
 }
 
 .social-icon {
   -webkit-transform: translateY(20%);
   -ms-transform: translateY(20%);
   transform: translateY(20%);
+  height: max-content;
 }
 
 .wsu-icon:hover {
@@ -158,26 +158,12 @@
   color: var(--text-primary-color);
 }
 
-.resume-icon {
-  display: none;
-}
-
-.resume-button {
-  display: block;
-}
-
 @media only screen and (max-width: 600px) {
-  .resume-button {
-    display: none;
-  }
   .social-container {
     justify-content: space-between;
   }
   .social-group {
     padding: 0 0em;
-  }
-  .resume-icon {
-    display: block;
   }
   .site-title {
     font-size: 3.5em !important;
@@ -352,6 +338,7 @@ footer {
   fill: currentcolor;
   box-sizing: content-box !important;
   vertical-align: baseline;
+  transform: translateY(10%);
 }
 
 .photography-container {
@@ -366,19 +353,6 @@ footer {
 
 .photography-container img {
   border-radius: 5px !important;
-}
-
-.resume-download-link {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 1.5em !important;
-  padding: 0.5em !important;
-  float: right !important;
-  text-decoration: none;
-}
-
-.resume-download-link:active {
-  box-shadow: none !important;
 }
 
 .has-text-centered {

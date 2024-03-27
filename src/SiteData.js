@@ -71,8 +71,13 @@ var siteData = {
     {
       title: "UW Medicine - Program Assistant",
       date: "2020 - Present",
-      description: "Working as a part-time software engineer helping to create web apps and data visualizations using Python, R, and SQL. During this time, I developed a full-stack web application to display and analyze laboratory test metrics.",
-      url: "https://www.uwmedicine.org/",
+      description: "Working as a part-time software engineer helping to create web apps and data visualizations using Python, R, and SQL. During this time, I developed a full-stack web application to display and analyze laboratory test metrics. I also worked on a research project as part of the Foy Lab at UW Medicine.",
+      url: "https://foylab.xyz/people.html",
+    },
+    {
+      title: "Stealth Startup - Freelance Software Engineer",
+      date: "2023 - 2024",
+      description: "Working as a freelance software engineer, I developed a full-stack web application using React and TypeScript. This was a re-write of an open-source project I had developed years earlier called Equinox Dialogue that had the attention of the founders for its ease of use.",
     },
     {
       title: "UW Medicine - Volunteer",
@@ -133,13 +138,6 @@ var siteData = {
       title: "Japanese Art Swords",
       description: "A fully custom website I made using CraftCMS, I wrote a python script to scrape and import data from the old Drupal site.",
       url: "https://japaneseartswords.com",
-      photos: [],
-    },
-    {
-      title: "NOS",
-      description:
-        "A simple and work-in-progress operating system I made for educational purposes. Currently just runs Conway's Game of Life on boot.",
-      url: "https://github.com/nlaha/NOS",
       photos: [],
     },
     {

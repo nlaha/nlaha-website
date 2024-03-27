@@ -1,8 +1,8 @@
 <template>
   <div class="dark-mode-button-container">
     <button className="dark-mode-button" v-on:click="toggleDarkMode">
-      <span v-if="darkMode"><ion-icon name="sunny"></ion-icon></span>
-      <span v-else><ion-icon name="moon"></ion-icon></span>
+      <span v-if="darkMode"><i class="bi bi-moon-fill"></i></span>
+      <span v-else><i class="bi bi-sun-fill"></i></span>
     </button>
   </div>
   <div class="container section">
@@ -31,10 +31,10 @@
             href="https://instagram.com/nathan.laha"
             class="social-icon"
           >
-            <ion-icon name="logo-instagram" title="Instagram"></ion-icon>
+            <i class="bi bi-instagram" title="Instagram"></i>
           </a>
           <a role="button" href="https://github.com/nlaha" class="social-icon">
-            <ion-icon name="logo-github" title="GitHub"></ion-icon>
+            <i class="bi bi-github" title="GitHub"></i>
           </a>
           <a
             role="button"
@@ -42,7 +42,7 @@
             href="https://www.facebook.com/nathan.laha.3"
             class="social-icon"
           >
-            <ion-icon name="logo-facebook" title="Facebook"></ion-icon>
+            <i class="bi bi-facebook" title="Facebook"></i>
           </a>
           <a
             role="button"
@@ -50,28 +50,21 @@
             href="https://www.linkedin.com/in/nlaha"
             class="social-icon"
           >
-            <ion-icon name="logo-linkedin" title="LinkedIn"></ion-icon>
+            <i class="bi bi-linkedin" title="LinkedIn"></i>
           </a>
           <a role="button" href="mailto:nlaha@nlaha.com" class="social-icon">
-            <ion-icon name="mail" title="Email"></ion-icon>
-          </a>
-        </div>
-        <div class="social-group panel card">
-          <a
-            role="button"
-            aria-label="Download Resume"
-            href="https://github.com/nlaha/nlaha-website-2021/raw/main/NathanLaha_Resume.pdf"
-            class="resume-download-link resume-button"
-          >
-            Resume
+            <i class="bi bi-envelope-at-fill" title="Email"></i>
           </a>
           <a
             role="button"
             aria-label="Download Resume"
             href="https://github.com/nlaha/nlaha-website-2021/raw/main/NathanLaha_Resume.pdf"
-            class="resume-download-link resume-icon"
+            class="resume-download-link social-icon"
           >
-            <ion-icon name="download" title="Resume Download"></ion-icon>
+            <i
+              class="bi bi-file-earmark-person-fill"
+              title="Resume Download"
+            ></i>
           </a>
         </div>
       </div>
@@ -88,17 +81,8 @@
             occasional notes.
           </p>
           <div style="display: flex; gap: 1em">
-            <a
-              aria-label="Notion"
-              role="button"
-              href="https://njlaha.notion.site/"
-              ><button class="panel-button">Notion</button>
-            </a>
             <a aria-label="Blog" role="button" href="https://blog.nlaha.com/"
               ><button class="panel-button">Blog</button>
-            </a>
-            <a aria-label="Bots" role="button" href="https://wos.nlaha.com/"
-              ><button class="panel-button">Bots</button>
             </a>
           </div>
         </div>
