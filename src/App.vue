@@ -58,7 +58,7 @@
           <a
             role="button"
             aria-label="Download Resume"
-            href="https://github.com/nlaha/nlaha-website-2021/raw/main/NathanLaha_Resume.pdf"
+            href="https://github.com/nlaha/nlaha-website-2021/raw/main/NathanLaha_Resume_NoContact.pdf"
             class="resume-download-link social-icon"
           >
             <i
