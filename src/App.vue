@@ -81,7 +81,7 @@
             occasional notes.
           </p>
           <div style="display: flex; gap: 1em">
-            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'B0B1CDW9P');kofiwidget2.draw();</script> 
+            <a href='https://ko-fi.com/B0B1CDW9P' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
           </div>
         </div>
       </div>
