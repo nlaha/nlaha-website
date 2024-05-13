@@ -2,7 +2,7 @@ var siteData = {
   darkMode: false,
   userTheme: "light-theme",
   generic: {
-    summary: `I'm a 3rd-year undergraduate student at Washington State University studying Computer Science. I've always had an interest in computing, and I like working on programming projects in my free time.`,
+    summary: `I'm a 4th-year undergraduate student at Washington State University studying Computer Science. This website acts as a resume as well as a place to show off projects and share social media links.`,
   },
   contacts: [
     {
@@ -20,40 +20,6 @@ var siteData = {
     {
       type: "GitHub",
       value: "https://github.com/nlaha",
-    },
-  ],
-  skills: [
-    {
-      name: "NodeJS and JavaScript (Full Stack)",
-      level: "75",
-    },
-    {
-      name: "C and C++",
-      level: "79",
-    },
-    {
-      name: "Linux Server Configuration",
-      level: "70",
-    },
-    {
-      name: "Azure DevOps Project Management",
-      level: "25",
-    },
-    {
-      name: "Python",
-      level: "85",
-    },
-    {
-      name: "HTML and CSS Web Design",
-      level: "80",
-    },
-    {
-      name: "JAVA & C# Programming",
-      level: "78",
-    },
-    {
-      name: "SQL and NoSQL databases",
-      level: "50",
     },
   ],
   experiences: [
@@ -112,6 +78,12 @@ var siteData = {
   ],
   programming: [
     {
+      title: "Godot MIDI",
+      description: "Wrote a custom MIDI file parser from scratch both in C# and later in C++ as a plugin for the Godot game engine. This allows developers to incorporate music synchronization into their games or applications easily. It is an open-source project with over thirty stars on GitHub.",
+      url: "https://github.com/nlaha/godot-midi-4.0",
+      photos: [],
+    },
+    {
       title: "Coug Study Network",
       description: "Coug Study Network is a platform for sharing assignment information and study habits. It allows students to make posts about assignments and rate how difficult or time consuming they were. This gives both students and professors valuable information about the classes.",
       url: "https://wsusn.nlaha.com",
@@ -127,12 +99,6 @@ var siteData = {
       title: "Equinox Dialogue",
       description: "A nonlinear dialogue tree generation tool made with React",
       url: "https://github.com/nlaha/EquinoxDialogue",
-    },
-    {
-      title: "Godot MIDI",
-      description: "Wrote a custom MIDI file parser from scratch both in C# and later in C++ as a plugin for the Godot game engine. This allows developers to incorporate music synchronization into their games or applications easily. It is an open-source project with over thirty stars on GitHub.",
-      url: "https://github.com/nlaha/godot-midi-4.0",
-      photos: [],
     },
     {
       title: "Japanese Art Swords",

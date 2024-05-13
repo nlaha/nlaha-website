@@ -76,10 +76,6 @@
           <p class="panel-description" style="margin-top: 0rem">
             {{ generic.summary }}
           </p>
-          <p class="panel-description">
-            I also have a blog, but I mainly use it for school projects and
-            occasional notes.
-          </p>
           <div style="display: flex; gap: 1em">
             <a href='https://ko-fi.com/B0B1CDW9P' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
           </div>
