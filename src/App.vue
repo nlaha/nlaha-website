@@ -81,9 +81,7 @@
             occasional notes.
           </p>
           <div style="display: flex; gap: 1em">
-            <a aria-label="Blog" role="button" href="https://blog.nlaha.com/"
-              ><button class="panel-button">Blog</button>
-            </a>
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'B0B1CDW9P');kofiwidget2.draw();</script> 
           </div>
         </div>
       </div>
