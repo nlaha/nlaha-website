@@ -169,7 +169,6 @@ export default {
     return siteData;
   },
   mounted() {
-    this.sortSkills();
     if (
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -192,9 +191,6 @@ export default {
       } else {
         this.setTheme("light-theme");
       }
-    },
-    sortSkills() {
-      this.skills.sort((a, b) => (a.level < b.level ? 1 : -1));
     },
     downloadResume() {
       exportSiteAsPDF(this);
