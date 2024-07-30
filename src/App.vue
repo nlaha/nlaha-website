@@ -161,8 +161,6 @@
 </style>
 
 <script>
-import { exportSiteAsPDF } from "./ResumeGenerator";
-
 import siteData from "./SiteData";
 
 export default {
@@ -194,9 +192,6 @@ export default {
       } else {
         this.setTheme("light-theme");
       }
-    },
-    downloadResume() {
-      exportSiteAsPDF(this);
     },
   },
 };
