@@ -24,6 +24,12 @@ var siteData = {
   ],
   experiences: [
     {
+      title: "Premera Blue Cross - Software Engineer Intern",
+      date: "Summer 2024",
+      description: "Working as a full-time intern on the medical management team, I contributed to several back-end services to improve the efficiency and traceability of Premera data. During this time I helped identify and fix 15+ bugs in an application during UAT.",
+      url: "https://www.premera.com",
+    },
+    {
       title: "Premera Blue Cross - Systems Engineering Intern",
       date: "Summer 2023",
       description: "Working as a full-time intern in systems engineering at Premera Blue Cross. I helped the cloud platform team implement policy and Terraform code across an Azure tenant. Ultimately, this enabled 5 teams across the company better utilize Azure while staying compliant with HIPAA and HITRUST standards.",
