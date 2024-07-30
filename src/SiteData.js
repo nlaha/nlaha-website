@@ -59,7 +59,7 @@ var siteData = {
     },
     {
       title: "Washington State University - B.Sc. CS",
-      date: "2021 - Present",
+      date: "2021 - 2025",
       description: "Working towards a Bachelor of Science in computer science from the WSU Voiland College of Engineering and Architecture.",
       URL: "https://school.eecs.wsu.edu/academics/undergraduate-program/computer-science/",
     },
@@ -85,14 +85,8 @@ var siteData = {
   programming: [
     {
       title: "Godot MIDI",
-      description: "Wrote a custom MIDI file parser from scratch both in C# and later in C++ as a plugin for the Godot game engine. This allows developers to incorporate music synchronization into their games or applications easily. It is an open-source project with over thirty stars on GitHub.",
-      url: "https://github.com/nlaha/godot-midi-4.0",
-      photos: [],
-    },
-    {
-      title: "Coug Study Network",
-      description: "Coug Study Network is a platform for sharing assignment information and study habits. It allows students to make posts about assignments and rate how difficult or time consuming they were. This gives both students and professors valuable information about the classes.",
-      url: "https://wsusn.nlaha.com",
+      description: "Wrote a custom MIDI file parser from scratch both in C# and later in C++ as a plugin for the Godot game engine. This allows developers to incorporate music synchronization into their games or applications easily. It is an open-source project with over sixty stars on GitHub.",
+      url: "https://github.com/nlaha/godot-midi",
       photos: [],
     },
     {
