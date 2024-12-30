@@ -48,7 +48,7 @@ var siteData = {
     },
     {
       title: "Stealth Startup - Freelance Software Engineer",
-      date: "2023 - 2024",
+      date: "2023 - Present",
       description: "Working as a freelance software engineer, I developed a full-stack web application using React and TypeScript. This was a re-write of an open-source project I had developed years earlier called Equinox Dialogue that had the attention of the founders for its ease of use.",
     },
     {
