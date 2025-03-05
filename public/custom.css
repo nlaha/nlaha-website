@@ -10,8 +10,8 @@
   --background-color-tertiary: #f6f6f6;
   --background-color-tertiary2: #f7f7f7;
   --background-color-tertiary3: #e0dddd;
-  --accent-color: #981e32;
-  --text-primary-color: #293241;
+  --accent-color: hsl(217, 43%, 37%);
+  --text-primary-color: hsl(217, 43%, 17%);
   --element-size: 4rem;
   --shadow-color: rgba(0, 0, 0, 0.11);
   --grid-gutter: 0.5rem;
@@ -21,11 +21,11 @@
 /* Define styles for the root window with dark - mode preference */
 :root.dark-theme {
   --background-color-primary: #181818;
-  --background-color-secondary: #811a2b;
+  --background-color-secondary: #181818;
   --background-color-tertiary: #111111;
   --background-color-tertiary2: #121212;
   --background-color-tertiary3: #282828;
-  --accent-color: hsl(350, 77%, 46%);
+  --accent-color: hsl(217, 43%, 47%);
   --text-primary-color: #ddd;
   --shadow-color: rgba(0, 0, 0, 0.4);
   --grid-gutter: 0.5rem;
@@ -48,11 +48,13 @@
 }
 
 .site-subtitle {
+  flex-grow: 1;
   margin: 0rem 0;
   font-size: 2em;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: var(--text-primary-color);
+  min-width: 15rem;
 }
 
 .header-div {
@@ -65,17 +67,17 @@
 .title-container {
   margin: auto;
   margin-left: 0;
+  width: 100%;
 }
 
 .social-container {
   margin: auto;
-  margin-bottom: 0;
   min-width: 300px;
-  width: 100%;
+  margin-bottom: 0;
   margin-right: 0;
   display: flex;
-  justify-content: flex-start;
-  gap: 1em;
+  justify-content: flex-end;
+  flex-grow: 1;
 }
 
 .social-group {
@@ -158,22 +160,6 @@
   color: var(--text-primary-color);
 }
 
-@media only screen and (max-width: 600px) {
-  .social-container {
-    justify-content: space-between;
-  }
-  .social-group {
-    padding: 0 0em;
-  }
-  .site-title {
-    font-size: 3.5em !important;
-    margin: 0;
-  }
-  .site-subtitle {
-    font-size: 1.5em !important;
-  }
-}
-
 @media only screen and (max-width: 1200px) {
   .site-title {
     font-size: 4.5em;
@@ -202,6 +188,28 @@
   }
   .social-group {
     margin: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .social-container {
+    justify-content: space-between;
+  }
+  .social-group {
+    padding: 0 0em;
+    width: 100%;
+    justify-content: center;
+  }
+  .site-title {
+    font-size: 3.5em !important;
+    margin: 0;
+  }
+  .site-subtitle {
+    font-size: 1.5em !important;
+  }
+  .section {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 }
 
@@ -247,10 +255,18 @@ html {
   font-size: 1.25em;
 }
 
+.panel-subtitle {
+  width: 100%;
+  margin: auto;
+  font-size: 1em;
+  font-weight: 300;
+  color: var(--accent-color);
+}
+
 .panel-description {
   margin: auto;
   margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
 }
 
 .panel-content {
@@ -264,8 +280,8 @@ html {
   cursor: pointer;
   padding: 0.5rem 1rem;
   font-size: 1rem;
+  text-decoration: none;
 
-  margin-top: 1.2em;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   background-color: var(--background-color-primary) !important;
@@ -284,6 +300,15 @@ html {
 .skill-level {
   width: 100%;
   margin: auto;
+}
+
+.hstack {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
 }
 
 .skill-level::-webkit-progress-value {
