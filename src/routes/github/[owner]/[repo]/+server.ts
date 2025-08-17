@@ -15,7 +15,11 @@ export async function GET({ params }) {
 	}
 
 	// Fetch from GitHub
-	const response = await fetch(`https://api.github.com/repos/${params.owner}/${params.repo}`);
+	const response = await fetch(`https://api.github.com/repos/${params.owner}/${params.repo}`, {
+		headers: {
+			'User-Agent': 'nlaha.com <nlaha@nlaha.com>'
+		}
+	});
 	const repoData = await response.json();
 
 	// Store in cache

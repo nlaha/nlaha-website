@@ -277,7 +277,9 @@
 												</span>
 												<div>
 													<span class="text-lg text-gray-500 dark:text-gray-400">
-														{await getGithubData(project.github).then((data) => data.license ?? '')}
+														{await getGithubData(project.github).then(
+															(data) => data.license?.spdx_id ?? ''
+														)}
 													</span>
 												</div>
 											</div>
