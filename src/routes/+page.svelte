@@ -382,6 +382,9 @@
 			</div>
 		</div>
 	</div>
+	<footer class="mt-10 text-center text-sm text-gray-500 dark:text-gray-400">
+		&copy; {new Date().getFullYear()} Nathan Laha. All rights reserved.
+	</footer>
 </div>
 
 <style>
