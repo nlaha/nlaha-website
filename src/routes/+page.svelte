@@ -184,9 +184,21 @@
 											? ''
 											: 'animate-bounce'} text-gray-700 ease-in-out md:block dark:text-gray-300"
 									/>
-									<h3 class="prose prose-lg font-sans text-lg text-gray-900 dark:text-gray-300">
-										{experience.position} - {experience.company}
-									</h3>
+									<div class="flex flex-wrap items-center md:gap-2">
+										<h3
+											class="prose prose-lg w-full flex-grow font-sans text-lg font-semibold text-gray-900 md:w-auto md:flex-grow-0 md:font-normal dark:text-gray-300"
+										>
+											{experience.position}
+										</h3>
+										<span
+											class="mx-2 hidden h-6 rounded-full border-2 opacity-25 md:block dark:border-black"
+										></span>
+										<h4
+											class="prose prose-lg font-sans text-sm text-gray-700 md:text-lg dark:text-gray-300"
+										>
+											{experience.company}
+										</h4>
+									</div>
 								</div>
 								<h3
 									class="prose prose-lg flex items-center font-sans text-sm text-gray-700 italic sm:text-lg sm:not-italic dark:text-gray-300"
@@ -195,11 +207,7 @@
 										month: 'short',
 										year: 'numeric'
 									})}
-									<Fa
-										icon={faArrowRight}
-										size="xs"
-										class="mx-2 hidden text-gray-700 sm:block dark:text-gray-300"
-									/>
+									<Fa icon={faArrowRight} size="xs" class="mx-2 text-gray-700 dark:text-gray-300" />
 									{experience.endDate
 										? experience.endDate.toLocaleString('default', {
 												month: 'short',
