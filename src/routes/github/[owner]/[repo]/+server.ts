@@ -14,12 +14,12 @@ export async function GET({ params }) {
 		return json(cache[cacheKey].data);
 	}
 
-	// // Fetch from GitHub
-	// const response = await fetch(`https://api.github.com/repos/${params.owner}/${params.repo}`);
-	// const repoData = await response.json();
+	// Fetch from GitHub
+	const response = await fetch(`https://api.github.com/repos/${params.owner}/${params.repo}`);
+	const repoData = await response.json();
 
-	// // Store in cache
-	// cache[cacheKey] = { data: repoData, timestamp: now };
+	// Store in cache
+	cache[cacheKey] = { data: repoData, timestamp: now };
 
-	// return json(repoData);
+	return json(repoData);
 }

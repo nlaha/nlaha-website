@@ -16,7 +16,8 @@
 		"enabled": true
 	},
 	"vars": {
-		"BUN_VERSION": "1.2.5"
+		"BUN_VERSION": "1.2.5",
+		"SKIP_DEPENDENCY_INSTALL": true
 	}
 	/**
 	 * Smart Placement

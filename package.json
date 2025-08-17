@@ -6,7 +6,7 @@
 	"packageManager": "bun@1.2.5",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "bun install && vite build",
 		"preview": "bun run build && wrangler dev",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
