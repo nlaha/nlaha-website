@@ -9,7 +9,8 @@ import {
 	faChalkboardTeacher,
 	faFlask,
 	faGraduationCap,
-	faIdBadge
+	faIdBadge,
+	faSquareEnvelope
 } from '@fortawesome/free-solid-svg-icons';
 import { SvelteDate } from 'svelte/reactivity';
 
@@ -28,6 +29,11 @@ export const headerLinks = $state([
 		icon: faSquareGithub,
 		url: 'https://github.com/nlaha',
 		ariaLabel: 'Follow me on GitHub'
+	},
+	{
+		icon: faSquareEnvelope,
+		url: 'mailto:nlaha@nlaha.com',
+		ariaLabel: 'Send me an email'
 	}
 ]);
 
@@ -171,7 +177,7 @@ export const projects: {
 	}
 ];
 
-export const games: {
+export const arts: {
 	name: string;
 	description: string;
 	steam?: string;

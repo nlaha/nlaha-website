@@ -5,18 +5,19 @@
 		headerLinks,
 		sortedExperience as experience,
 		projects,
-		games
+		arts
 	} from '$lib/content.svelte';
 	import {
 		faArrowRight,
 		faBriefcase,
-		faGamepad,
 		faGraduationCap,
 		faMoon,
 		faMusic,
+		faPaintBrush,
 		faProjectDiagram,
 		faStar,
-		faSun
+		faSun,
+		faWaveSquare
 	} from '@fortawesome/free-solid-svg-icons';
 	import { onMount } from 'svelte';
 
@@ -64,7 +65,7 @@
 	</title>
 </svelte:head>
 
-<div class="mt-lg container mx-auto p-4">
+<div class="mt-lg container mx-auto my-10 p-4">
 	<div class="flex flex-col flex-wrap gap-4">
 		<div class="flex flex-row flex-wrap justify-between gap-4">
 			<div
@@ -92,22 +93,30 @@
 			<div
 				class="flex flex-grow flex-row items-center gap-6 rounded-md border-2 border-gray-200 bg-gray-100 p-4 md:p-6 dark:border-gray-700 dark:bg-gray-800"
 			>
-				<Fa icon={faStar} size="2x" class="hidden md:block dark:text-gray-600" />
+				<Fa icon={faWaveSquare} size="2x" class="hidden md:block dark:text-gray-600" />
 				<p class="prose font-sans text-gray-700 dark:text-gray-300">
 					Hi there! I'm a software engineer based in Seattle, WA. On this site, you'll see projects
 					I'm working on, links to my social media profiles and more.
 				</p>
 			</div>
 			<div
-				class="hidden flex-shrink flex-row items-center gap-6 rounded-md border-2 border-gray-200 bg-gray-100 p-4 md:flex md:p-6 dark:border-gray-700 dark:bg-gray-800"
+				class="hidden flex-shrink flex-row items-center gap-6 rounded-md border-2 border-gray-200 bg-gray-100 p-4 md:flex md:p-4 dark:border-gray-700 dark:bg-gray-800"
 			>
-				<button onclick={toggleTheme} class="rounded-md bg-gray-200 p-2 dark:bg-gray-700">
-					<Fa
-						size="3x"
-						class="text-gray-700 dark:text-gray-400"
-						icon={theme === 'light' ? faMoon : faSun}
-					/>
-				</button>
+				<div class="grid grid-cols-2 grid-rows-2 gap-2">
+					<button
+						onclick={toggleTheme}
+						class="rounded-md bg-gray-200 p-2 transition duration-200 ease-in-out hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600"
+					>
+						<Fa
+							size="1x"
+							class="text-gray-700 dark:text-gray-400"
+							icon={theme === 'light' ? faMoon : faSun}
+						/>
+					</button>
+					<div class="rounded-md bg-gray-200 p-2 dark:bg-gray-700"></div>
+					<div class="rounded-md bg-gray-200 p-2 dark:bg-gray-700"></div>
+					<div class="rounded-md bg-gray-200 p-2 dark:bg-gray-700"></div>
+				</div>
 			</div>
 		</div>
 
@@ -226,7 +235,7 @@
 				>
 					<div class="mb-4 flex flex-row items-center justify-between">
 						<h2 class="prose prose-xl font-display text-4xl text-gray-700 dark:text-gray-300">
-							Projects
+							Code
 						</h2>
 						<Fa icon={faProjectDiagram} size="2x" class="text-gray-700 dark:text-gray-300" />
 					</div>
@@ -322,20 +331,20 @@
 				>
 					<div class="mb-4 flex flex-row items-center justify-between">
 						<h2 class="prose prose-xl font-display text-4xl text-gray-700 dark:text-gray-300">
-							Game Dev
+							Art
 						</h2>
-						<Fa icon={faGamepad} size="2x" class="text-gray-700 dark:text-gray-300" />
+						<Fa icon={faPaintBrush} size="2x" class="text-gray-700 dark:text-gray-300" />
 					</div>
-					{#each games as game}
+					{#each arts as art}
 						<div
-							class="flex flex-col flex-wrap justify-between p-4 {game.steam
+							class="flex flex-col flex-wrap justify-between p-4 {art.steam
 								? 'rounded-md border-2 border-gray-300 bg-gray-200 p-4 dark:border-gray-700 dark:bg-gray-800'
-								: 'sparkle rounded-md bg-amber-900'} animate {game.steam
+								: 'sparkle rounded-md bg-amber-900'} animate {art.steam
 								? 'cursor-pointer transition duration-200 ease-in-out hover:scale-101'
 								: ''}"
 						>
 							<a
-								href={game.steam}
+								href={art.steam}
 								class="w-full flex-grow sm:w-auto"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -345,17 +354,17 @@
 										<Fa
 											icon={faMusic}
 											size="lg"
-											class="hidden {game.steam
+											class="hidden {art.steam
 												? ''
 												: 'animate-bounce'} text-gray-700 ease-in-out md:block dark:text-gray-300"
 										/>
 										<h3 class="prose prose-lg font-sans text-lg text-gray-700 dark:text-gray-300">
-											{game.name}
+											{art.name}
 										</h3>
 									</div>
 								</div>
 
-								{#if game.steam}
+								{#if art.steam}
 									<span class="mt-1 block text-xs text-gray-500 dark:text-gray-400"
 										>click to learn more</span
 									>
@@ -363,7 +372,7 @@
 							</a>
 
 							<div class="mt-3 text-sm text-gray-500 dark:text-gray-400">
-								{game.description}
+								{art.description}
 							</div>
 						</div>
 					{/each}
