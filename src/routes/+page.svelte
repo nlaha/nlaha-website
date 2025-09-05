@@ -40,18 +40,18 @@
 	let theme = $state();
 
 	onMount(() => {
-		// On page load or when changing themes, best to add inline in `head` to avoid FOUC
-		document.documentElement.classList.toggle(
-			'dark',
-			localStorage.theme === 'dark' ||
-				(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-		);
+		// Theme is already applied by the inline script in app.html
+		// Just read the current state
 		theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
 	});
 
 	function toggleTheme() {
 		document.documentElement.classList.toggle('dark');
 		theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+		
+		// Save the theme preference to localStorage
+		const newTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+		localStorage.theme = newTheme;
 	}
 </script>
 

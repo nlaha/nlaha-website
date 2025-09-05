@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -12,4 +12,13 @@
 	--font-sans: 'DM Sans', sans-serif;
 	--font-serif: 'DM Serif Display', serif;
 	--font-display: 'DM Serif Display', serif;
+	
+}
+
+.background-canvas {
+	display: block; /* Remove extra space below canvas */
+	position: fixed; /* Position fixed to cover the entire viewport */
+	top: 0;
+	left: 0;
+	z-index: -1; /* Place behind other content */
 }

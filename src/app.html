@@ -11,6 +11,22 @@
 		<meta name="language" content="English" />
 		<meta name="author" content="Nathan Laha" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<script>
+			// Theme detection script to prevent FOUC (Flash of Unstyled Content)
+			// This runs immediately when the page loads, before any content is rendered
+			(function() {
+				const isDark = localStorage.theme === 'dark' || 
+					(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+				
+				if (isDark) {
+					document.documentElement.classList.add('dark');
+				} else {
+					document.documentElement.classList.remove('dark');
+				}
+			})();
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover" class="dark:bg-gray-900">
