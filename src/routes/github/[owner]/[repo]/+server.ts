@@ -5,7 +5,7 @@ import { json } from '@sveltejs/kit';
 const cache: Record<string, { data: any; timestamp: number }> = {};
 const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 
-export async function GET({ params }: { params: { owner: string; repo: string } }) {
+export async function GET({ params, setHeaders }: { params: { owner: string; repo: string }, setHeaders: (headers: Record<string, string>) => void }) {
 	const cacheKey = `${params.owner}/${params.repo}`;
 	const now = Date.now();
 
@@ -24,6 +24,10 @@ export async function GET({ params }: { params: { owner: string; repo: string } 
 
 	// Store in cache
 	cache[cacheKey] = { data: repoData, timestamp: now };
+
+    setHeaders({
+        'cache-control': 'public, max-age=86400' // Cache for 1 day
+    });
 
 	return json(repoData);
 }

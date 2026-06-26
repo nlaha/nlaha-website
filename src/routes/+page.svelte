@@ -5,11 +5,14 @@
 		headerLinks,
 		sortedExperience as experience,
 		projects,
-		arts
+		arts,
+		publications
 	} from '$lib/content.svelte';
 	import {
 		faArrowRight,
+		faBook,
 		faBriefcase,
+		faCopy,
 		faGraduationCap,
 		faMoon,
 		faMusic,
@@ -48,7 +51,7 @@
 	function toggleTheme() {
 		document.documentElement.classList.toggle('dark');
 		theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-		
+
 		// Save the theme preference to localStorage
 		const newTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
 		localStorage.theme = newTheme;
@@ -60,12 +63,27 @@
 		name="description"
 		content="Nathan Laha - {experience[0].position} at {experience[0].company}"
 	/>
-	<title>
-		Nathan Laha - {experience[0].position} at {experience[0].company}
-	</title>
+	<title>Nathan Laha - {experience[0].position} at {experience[0].company}</title>
+	<meta property="og:title" content="Nathan Laha - {experience[0].position} at {experience[0].company}" />
+	<meta property="og:description" content="Nathan Laha - {experience[0].position} at {experience[0].company}" />
+	<meta name="twitter:title" content="Nathan Laha - {experience[0].position} at {experience[0].company}" />
+	<meta name="twitter:description" content="Nathan Laha - {experience[0].position} at {experience[0].company}" />
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Nathan Laha",
+		"url": "https://nlaha.com",
+		"sameAs": [
+			"https://github.com/nlaha",
+			"https://www.linkedin.com/in/nlaha/",
+			"https://www.instagram.com/nathan.laha"
+		],
+		"jobTitle": experience[0].position,
+		"worksFor": { "@type": "Organization", "name": experience[0].company }
+	})}</script>`}
 </svelte:head>
 
-<div class="mt-lg container mx-auto my-10 p-4">
+<main class="mt-lg container mx-auto my-10 p-4">
 	<div class="flex flex-col flex-wrap gap-4">
 		<div class="flex flex-row flex-wrap justify-between gap-4">
 			<div
@@ -93,7 +111,7 @@
 			<div
 				class="flex flex-grow flex-row items-center gap-6 rounded-md border-2 border-gray-200 bg-gray-100 p-4 md:p-6 dark:border-gray-700 dark:bg-gray-800"
 			>
-				<Fa icon={faWaveSquare} size="2x" class="hidden md:block dark:text-gray-600" />
+				<span aria-hidden="true"><Fa icon={faWaveSquare} size="2x" class="hidden md:block dark:text-gray-600" /></span>
 				<p class="prose font-sans text-gray-700 dark:text-gray-300">
 					Hi there! I'm a software engineer based in Seattle, WA. On this site, you'll see projects
 					I'm working on, links to my social media profiles and more.
@@ -105,13 +123,16 @@
 				<div class="grid grid-cols-2 grid-rows-2 gap-2">
 					<button
 						onclick={toggleTheme}
+						aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
 						class="rounded-md bg-gray-200 p-2 transition duration-200 ease-in-out hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600"
 					>
-						<Fa
-							size="1x"
-							class="text-gray-700 dark:text-gray-400"
-							icon={theme === 'light' ? faMoon : faSun}
-						/>
+						<span aria-hidden="true">
+							<Fa
+								size="1x"
+								class="text-gray-700 dark:text-gray-400"
+								icon={theme === 'light' ? faMoon : faSun}
+							/>
+						</span>
 					</button>
 					<div class="rounded-md bg-gray-200 p-2 dark:bg-gray-700"></div>
 					<div class="rounded-md bg-gray-200 p-2 dark:bg-gray-700"></div>
@@ -128,7 +149,7 @@
 				<h2 class="prose prose-xl font-display text-4xl text-gray-700 dark:text-gray-300">
 					Education
 				</h2>
-				<Fa icon={faGraduationCap} size="2x" class="text-gray-700 dark:text-gray-300" />
+				<span aria-hidden="true"><Fa icon={faGraduationCap} size="2x" class="text-gray-700 dark:text-gray-300" /></span>
 			</div>
 			{#each educations as education}
 				<div class="flex flex-wrap justify-between">
@@ -155,6 +176,36 @@
 			{/each}
 		</div>
 
+		<!-- Publications -->
+		<div
+			class="flex flex-col gap-4 rounded-md border-2 border-gray-200 bg-gray-100 p-4 md:p-6 dark:border-gray-700 dark:bg-gray-800"
+		>
+			<div class="flex flex-row items-center justify-between">
+				<h2 class="prose prose-xl font-display text-4xl text-gray-700 dark:text-gray-300">
+					Publications
+				</h2>
+				<span aria-hidden="true"><Fa icon={faBook} size="2x" class="text-gray-700 dark:text-gray-300" /></span>
+			</div>
+			<div class="flex flex-wrap gap-4">
+				{#each publications as publication}
+					<a href={publication.url} target="_blank" rel="noopener noreferrer" aria-label="{publication.journal}: {publication.title} (opens in new tab)">
+							<div
+								class="flex flex-wrap justify-between rounded-md border-2 border-gray-300 bg-gray-200 p-4 dark:border-gray-700 dark:bg-gray-800 cursor-pointer transition duration-200 ease-in-out hover:scale-101"
+							>
+								<h3 class="prose prose-md font-sans max-w-full text-gray-700 dark:text-gray-300">
+									{publication.journal}: {publication.title}
+								</h3>
+								<div class="flex flex-row items-center gap-2">
+									<p class="prose prose-sm mt-0 ml-2 font-sans text-gray-500 dark:text-gray-400">
+										{publication.citation}
+								</p>
+							</div>
+						</div>
+					</a>
+				{/each}
+			</div>
+		</div>
+
 		<!-- Experience -->
 		<div class="flex flex-row flex-wrap gap-4">
 			<div
@@ -164,7 +215,7 @@
 					<h2 class="prose prose-xl mb-4 font-display text-4xl text-gray-700 dark:text-gray-300">
 						Experience
 					</h2>
-					<Fa icon={faBriefcase} size="2x" class="text-gray-700 dark:text-gray-300" />
+					<span aria-hidden="true"><Fa icon={faBriefcase} size="2x" class="text-gray-700 dark:text-gray-300" /></span>
 				</div>
 				{#each experience as experience}
 					<div>
@@ -245,7 +296,7 @@
 						<h2 class="prose prose-xl font-display text-4xl text-gray-700 dark:text-gray-300">
 							Code
 						</h2>
-						<Fa icon={faProjectDiagram} size="2x" class="text-gray-700 dark:text-gray-300" />
+						<span aria-hidden="true"><Fa icon={faProjectDiagram} size="2x" class="text-gray-700 dark:text-gray-300" /></span>
 					</div>
 					{#each projects as project}
 						<div
@@ -343,7 +394,7 @@
 						<h2 class="prose prose-xl font-display text-4xl text-gray-700 dark:text-gray-300">
 							Art
 						</h2>
-						<Fa icon={faPaintBrush} size="2x" class="text-gray-700 dark:text-gray-300" />
+						<span aria-hidden="true"><Fa icon={faPaintBrush} size="2x" class="text-gray-700 dark:text-gray-300" /></span>
 					</div>
 					{#each arts as art}
 						<div
@@ -393,7 +444,7 @@
 	<footer class="mt-10 text-center text-sm text-gray-500 dark:text-gray-400">
 		&copy; {new Date().getFullYear()} Nathan Laha. All rights reserved.
 	</footer>
-</div>
+</main>
 
 <style>
 	.sparkle {
