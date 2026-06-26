@@ -192,7 +192,7 @@
 							<div
 								class="flex flex-wrap justify-between rounded-md border-2 border-gray-300 bg-gray-200 p-4 dark:border-gray-700 dark:bg-gray-800 cursor-pointer transition duration-200 ease-in-out hover:scale-101"
 							>
-								<h3 class="prose prose-md font-sans max-w-full text-gray-700 dark:text-gray-300">
+								<h3 class="prose prose-md font-sans max-w-full w-full text-gray-700 dark:text-gray-300">
 									{publication.journal}: {publication.title}
 								</h3>
 								<div class="flex flex-row items-center gap-2">
