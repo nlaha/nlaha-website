@@ -87,7 +87,8 @@ export const experience: {
 				'Implemented complex real - time applications using technologies like WebRTC',
 				'Deployed AI models and LLMs in a production setting',
 				'Configured advanced observability and load testing systems with Grafana and k6',
-				'Developed AI agent benchmark tasks for leading AI labs'
+				'Developed AI agent benchmark tasks for leading AI labs',
+				'Interviewed candidates for various engineering roles'
 			],
 			url: 'https://symbal.ai'
 		},
@@ -155,7 +156,8 @@ export const experience: {
 			items: [
 				'Created data visualizations using Python and R',
 				'Developed several production ready full-stack web apps in Python',
-				'Worked with the Foy Lab to develop a machine learning approach for test interpretations'
+				'Worked with the Foy Lab to develop a machine learning approach for test interpretations',
+				"Published a paper in JAMA Network Open on the development of an AI system for generating clinical urine drug test sign-outs"
 			],
 			url: 'https://foylab.xyz/'
 		},

@@ -7,18 +7,28 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@font-face {
+	font-family: 'Ronzino';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/Ronzino-Bold.woff2') format('woff2'),
+		url('/fonts/Ronzino-Bold.woff') format('woff');
+}
+
 @theme {
 	/* fonts */
 	--font-sans: 'DM Sans', sans-serif;
-	--font-serif: 'DM Serif Display', serif;
-	--font-display: 'DM Serif Display', serif;
-	
+	--font-serif: 'Ronzino', serif;
+	--font-display: 'Ronzino', serif;
 }
 
 .background-canvas {
-	display: block; /* Remove extra space below canvas */
-	position: fixed; /* Position fixed to cover the entire viewport */
+	display: block;
+	/* Remove extra space below canvas */
+	position: fixed;
+	/* Position fixed to cover the entire viewport */
 	top: 0;
 	left: 0;
-	z-index: -1; /* Place behind other content */
+	z-index: -1;
+	/* Place behind other content */
 }
