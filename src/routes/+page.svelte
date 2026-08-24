@@ -99,9 +99,11 @@
 	<div class="flex flex-col flex-wrap gap-4">
 		<div class="flex flex-row flex-wrap justify-between gap-4">
 			<div
-				class="flex flex-grow flex-col flex-wrap rounded-md border-2 border-amber-700 bg-amber-100 p-6 md:mt-4 dark:border-amber-100 dark:bg-amber-950"
+				class="flex min-w-0 flex-grow flex-col flex-wrap rounded-md border-2 border-amber-700 bg-amber-100 p-6 md:mt-4 dark:border-amber-100 dark:bg-amber-950"
 			>
-				<h1 class="font-display text-6xl whitespace-nowrap text-amber-950 dark:text-amber-100">
+				<h1
+					class="font-display text-4xl text-amber-950 sm:text-5xl md:text-6xl dark:text-amber-100"
+				>
 					Nathan Laha
 				</h1>
 				<p class="prose text-start font-sans text-amber-950 dark:text-amber-100">
