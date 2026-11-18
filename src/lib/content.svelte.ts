@@ -75,7 +75,7 @@ export const experience: {
 	url?: string;
 }[] = [
 		{
-			position: 'Founding Software Engineer',
+			position: 'Software Engineer',
 			company: 'Symbal',
 			startDate: new SvelteDate(2025, 5, 5),
 			endDate: undefined,
